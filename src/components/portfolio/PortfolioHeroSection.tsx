@@ -52,25 +52,25 @@ export function PortfolioHeroSection() {
 
         {/* Primary Interaction Layer */}
         <motion.div
-           variants={contentVariants}
-           initial="hidden"
-           animate="visible"
-           className="relative z-10 w-full h-full"
+          variants={contentVariants}
+          initial="hidden"
+          animate="visible"
+          className="relative z-10 w-full h-full"
         >
-          
+
           {/* Top Right Info Block */}
           <div className="absolute right-[5%] xl:right-[3%] top-[15dvh] sm:top-[25dvh] xl:top-[32dvh] max-w-[90%] sm:max-w-[400px] xl:max-w-[540px] text-right">
-             <p className="font-['Inter_Tight',_sans-serif] text-[13px] sm:text-[16px] xl:text-[18px] leading-[1.5] xl:leading-[26px] font-normal text-white uppercase tracking-wide mb-[24px] xl:mb-[32px]">
-               CAPTURING EMOTIONS WITH ARTISTRY, MY PHOTOGRAPHY EMBRACES WEDDINGS,
-               PORTRAITS, AND LIFESTYLE SESSIONS—PRESERVING YOUR STORY WITH ELEGANCE AND
-               TIMELESS BEAUTY.
-             </p>
-             <a
-               href="mailto:hello@Raku25.com"
-               className="font-['Inter_Tight',_sans-serif] text-[16px] xl:text-[18px] leading-[26px] font-medium text-white hover:underline transition-opacity"
-             >
-               hello@Raku25.com
-             </a>
+            <p className="font-['Inter_Tight',_sans-serif] text-[13px] sm:text-[16px] xl:text-[18px] leading-[1.5] xl:leading-[26px] font-normal text-white uppercase tracking-wide mb-[24px] xl:mb-[32px]">
+              CAPTURING EMOTIONS WITH ARTISTRY, MY PHOTOGRAPHY EMBRACES WEDDINGS,
+              PORTRAITS, AND LIFESTYLE SESSIONS—PRESERVING YOUR STORY WITH ELEGANCE AND
+              TIMELESS BEAUTY.
+            </p>
+            <a
+              href="mailto:hello@Raku25.com"
+              className="font-['Inter_Tight',_sans-serif] text-[16px] xl:text-[18px] leading-[26px] font-medium text-white hover:underline transition-opacity"
+            >
+              hello@Raku25.com
+            </a>
           </div>
 
           {/* Decorative Grid Ruler - Balanced and subtle */}
@@ -85,12 +85,12 @@ export function PortfolioHeroSection() {
           </div>
 
           {/* Giant Text "PORTFOLIO" */}
-         <div className="absolute bottom-[7%] left-[24px] sm:left-[88px] right-[24px] sm:right-[88px] pointer-events-none flex justify-center">
-             <h1
-               className="text-mega text-center leading-[0.75] select-none text-[clamp(4rem,18vw,9rem)] xl:text-[clamp(9rem,17.5vw,26rem)] font-bold tracking-tight text-white mix-blend-overlay opacity-60"
-             >
-               PORTFOLIO
-             </h1>
+          <div className="absolute bottom-[3%] left-[24px] sm:left-[88px] right-[24px] sm:right-[88px] pointer-events-none flex justify-center">
+            <h1
+              className="text-mega text-center leading-[0.75] select-none text-[clamp(4rem,18vw,9rem)] xl:text-[clamp(9rem,17.5vw,26rem)] font-bold tracking-tight text-white mix-blend-overlay opacity-60"
+            >
+              PORTFOLIO
+            </h1>
           </div>
         </motion.div>
       </div>

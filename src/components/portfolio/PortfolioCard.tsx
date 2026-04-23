@@ -42,7 +42,7 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
       {/* Card Image Wrap */}
       <div 
         ref={containerRef}
-        className="relative w-full h-[760.22px] rounded-[8px] overflow-hidden bg-gray-100 mb-8 cursor-none"
+        className="relative w-full h-[450px] sm:h-[600px] xl:h-[760.22px] rounded-[8px] overflow-hidden bg-gray-100 mb-6 sm:mb-8 cursor-default xl:cursor-none"
       >
         <img
           src={item.cover}
@@ -50,7 +50,7 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-out"
         />
 
-        {/* Glass Effect Lens */}
+        {/* Glass Effect Lens - Only on Desktop */}
         <AnimatePresence>
           {pos && (
             <motion.div
@@ -58,7 +58,7 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="pointer-events-none absolute rounded-full z-20 mix-blend-overlay"
+              className="hidden xl:block pointer-events-none absolute rounded-full z-20 mix-blend-overlay"
               style={{
                 left: pos.x - 90,
                 top: pos.y - 90,
@@ -75,8 +75,8 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
       {/* Card Content Wrapper with Double Borders */}
       <div className="flex flex-col">
         {/* Title Row */}
-        <div className="h-[44px] flex items-center border-b border-[#E2E2E3]">
-          <h3 className="text-[28px] md:text-[30.1px] leading-[40px] font-medium tracking-[-1px] text-[#05080C]">
+        <div className="h-auto sm:h-[44px] py-2 sm:py-0 flex items-center border-b border-[#E2E2E3]">
+          <h3 className="text-[24px] sm:text-[28px] md:text-[30.1px] leading-tight sm:leading-[40px] font-medium tracking-tight xl:tracking-[-1px] text-[#05080C]">
             {item.title}
           </h3>
         </div>

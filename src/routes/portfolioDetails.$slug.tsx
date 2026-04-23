@@ -47,7 +47,7 @@ function PortfolioDetailPage() {
     <main className="bg-black text-white overflow-x-hidden ">
 
       {/* 1. PORTFOLIO DETAILS HERO SECTION (943.98px) */}
-      <section className="relative w-full h-auto lg:h-[943.98px] flex flex-col items-center bg-black overflow-hidden lg:overflow-visible">
+      <section className="relative w-full h-auto lg:h-[943.98px] min-h-[70vh] flex flex-col items-center bg-black overflow-hidden lg:overflow-visible pb-12 lg:pb-0">
 
         {/* Background Base Image Layer - Camera details highlighted on dark */}
         <div
@@ -80,12 +80,12 @@ function PortfolioDetailPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="relative w-full lg:w-[713px] h-auto lg:h-[272px] flex flex-col"
+              className="relative w-full lg:w-[713px] h-auto lg:h-[272px] flex flex-col pt-8 lg:pt-0"
             >
-              <h1 className="relative lg:absolute lg:left-0 lg:-top-[8px] lg:w-[697.79px] lg:h-[216px] text-[42px] leading-[1.1] md:text-[64px] lg:text-[92.6px] lg:leading-[100px] font-medium tracking-[-2px] lg:tracking-[-4px] text-white flex items-center">
+              <h1 className="relative lg:absolute lg:left-0 lg:-top-[8px] lg:w-[697.79px] lg:h-[216px] text-[32px] sm:text-[42px] leading-[1.1] md:text-[64px] lg:text-[92.6px] lg:leading-[100px] font-medium tracking-tight lg:tracking-[-4px] text-white flex items-center">
                 {project.title}
               </h1>
-              <p className="relative lg:absolute lg:left-0 lg:top-[222px] lg:w-[658.86px] lg:h-[47px] text-[16px] lg:text-[16.5px] leading-[24px] lg:leading-[26px] font-normal text-[#999999] flex items-center mt-6 lg:mt-0">
+              <p className="relative lg:absolute lg:left-0 lg:top-[222px] lg:w-[658.86px] lg:h-[47px] text-[15px] lg:text-[16.5px] leading-[24px] lg:leading-[26px] font-normal text-[#999999] flex items-center mt-6 lg:mt-0">
                 {project.description}
               </p>
             </motion.div>
@@ -136,7 +136,7 @@ function PortfolioDetailPage() {
       </section>
 
       {/* 2. CONTENT SECTIONS (White Background) */}
-      <section className="bg-white lg:h-[3258px] text-[#05080C] relative py-12 lg:py-0">
+      <section className="bg-white lg:h-auto min-h-screen text-[#05080C] relative py-12 lg:py-40">
         <div className="w-full max-w-[1450px] lg:max-w-full xl:max-w-[1450px] mx-auto px-4 md:px-4 lg:px-[clamp(1rem,4vw,3.5rem)] xl:px-24 h-full relative flex flex-col lg:block gap-24 lg:gap-0">
 
           {/* Intro Section */}

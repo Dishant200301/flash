@@ -20,9 +20,9 @@ export function PortfolioListSection() {
       </div>
 
       {/* Portfolio Grid */}
-      <div className="max-w-[1920px] mx-auto px-[5%] sm:px-6 xl:px-12">
-        <div className="grid gap-x-6 sm:gap-x-12 gap-y-16 xl:gap-y-24 grid-cols-1 md:grid-cols-2">
-          {portfolioItems.slice(0, 6).map((item) => (
+      <div className="max-w-[1920px] mx-auto px-[5%] sm:px-4 xl:px-12">
+        <div className="grid gap-x-6 sm:gap-x-12 gap-y-16 xl:gap-y-24 grid-cols-1 xl:grid-cols-2">
+          {portfolioItems.map((item) => (
             <PortfolioCard key={item.slug} item={item} />
           ))}
         </div>

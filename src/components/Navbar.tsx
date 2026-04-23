@@ -60,8 +60,8 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center w-full">
-          <div className="absolute left-[22%]">
+        <div className="hidden xl:flex items-center flex-1">
+          <div className="xl:absolute xl:left-[22%] ml-[4%] lg:ml-[8%]">
             <Link
               to="/portfolio"
               activeProps={{ className: "underline decoration-1 underline-offset-[12px] opacity-100" }}
@@ -71,7 +71,7 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
             </Link>
           </div>
 
-          <ul className="flex items-center gap-12 ml-auto mr-[15%]">
+          <ul className="flex items-center gap-6 lg:gap-12 ml-auto xl:mr-[15%] mr-[5%]">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link 
@@ -85,18 +85,18 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
             ))}
           </ul>
 
-                    <a 
-                      href="mailto:HELLO@FLASH.COM" 
-                      className={`underline-grow whitespace-nowrap tracking-wide ${hoverColor} transition-colors font-medium`}
-                    >
-                      HELLO@FLASH.COM
-                    </a>
+          <a 
+            href="mailto:HELLO@FLASH.COM" 
+            className={`underline-grow whitespace-nowrap tracking-wide ${hoverColor} transition-colors font-medium ml-auto lg:ml-0`}
+          >
+            HELLO@FLASH.COM
+          </a>
         </div>
 
         {/* Mobile Toggle */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden relative z-[110] w-12 h-12 bg-white rounded-full flex flex-col items-center justify-center gap-[6px] text-black shadow-lg transition-transform active:scale-95"
+          className="xl:hidden relative z-[110] w-12 h-12 bg-white rounded-full flex flex-col items-center justify-center gap-[6px] text-black shadow-lg transition-transform active:scale-95"
           aria-label="Toggle menu"
         >
           {isOpen ? (
@@ -123,7 +123,7 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
               initial="closed"
               animate="open"
               exit="closed"
-              className="fixed inset-0 bg-[#05080C] z-[100] flex flex-col lg:hidden overflow-hidden"
+              className="fixed inset-0 bg-[#05080C] z-[100] flex flex-col xl:hidden overflow-hidden"
             >
               {/* Menu Links */}
               <div className="flex-1 flex flex-col items-center justify-center">
