@@ -7,7 +7,7 @@ import { BlogPost, blogPosts as posts } from "@/data/blog";
 export function BlogSection() {
   return (
     <section 
-      className="w-full bg-[#F5F5F5] py-[40px] sm:py-[60px] xl:py-[140px] px-4 sm:px-4 xl:px-5 flex flex-col items-center gap-[32px] sm:gap-[48px]"
+      className="w-full bg-[#F5F5F5] py-[40px] sm:py-[60px] xl:py-[80px] px-4 sm:px-4 xl:px-4 flex flex-col items-center gap-[32px] sm:gap-[48px]"
       style={{ fontFamily: "'Inter Tight', sans-serif" }}
     >
       
@@ -25,15 +25,15 @@ export function BlogSection() {
 
       {/* Exact Match Grid Layout from BlogGrid */}
       <div className="w-full max-w-[1400px]">
-        <div className="flex flex-col lg:flex-row gap-8 xl:gap-8 items-start px-2 xl:px-0">
+        <div className="flex flex-col lg:flex-row gap-8 xl:gap-8 items-start px-0 xl:px-0">
           <div className="w-full xl:w-[40%]">
             <BlogCard post={posts[0]} aspect="aspect-[4/5]" />
           </div>
           <div className="w-full xl:w-[30%]">
-            <BlogCard post={posts[1]} aspect="aspect-square xl:aspect-auto xl:h-[100%]" />
+            <BlogCard post={posts[1]} aspect="aspect-square" />
           </div>
           <div className="w-full xl:w-[30%]">
-            <BlogCard post={posts[2]} aspect="aspect-square xl:aspect-auto xl:h-[100%]" />
+            <BlogCard post={posts[2]} aspect="aspect-square" />
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ function BlogCard({ post, aspect = "aspect-square" }: { post: BlogPost; aspect?:
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Image Container */}
-      <div className={`relative overflow-hidden ${aspect} bg-[#f5f5f5]`}>
+      <div className={`relative overflow-hidden ${aspect} bg-[#f5f5f5] rounded-sm`}>
         <img
           src={post.cover}
           alt={post.title}
