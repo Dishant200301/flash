@@ -28,8 +28,13 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: appCss },
       {
         rel: "icon",
-        type: "image/svg+xml",
-        href: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><circle cx='50' cy='50' r='30' fill='white'/></svg>",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
+      {
+        rel: "shortcut icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
       },
     ],
   }),

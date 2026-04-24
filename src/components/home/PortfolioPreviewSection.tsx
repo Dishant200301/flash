@@ -67,7 +67,6 @@ export function PortfolioPreviewSection() {
           x: "-50%",
           y: "-50%",
           background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 40%, rgba(0,0,0,0.05) 100%)",
-          boxShadow: "inset 0 10px 20px rgba(255,255,255,0.8), inset 0 -15px 30px rgba(0,0,0,0.4), 0 25px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.6)",
         }}
         initial={{ width: 0, height: 0, opacity: 0 }}
         animate={{
@@ -119,12 +118,12 @@ export function PortfolioPreviewSection() {
         <div className="absolute top-[8%] right-[15%] w-[30%] h-[10%] rounded-[100%] bg-gradient-to-b from-white/60 to-transparent blur-[1px] rotate-[20deg] pointer-events-none" />
         
         {/* Layer 5: Base Shadowing & Ambient Occlusion */}
-        <div className="absolute inset-0 rounded-full shadow-[inset_0_-10px_20px_rgba(0,0,0,0.5)] pointer-events-none mix-blend-multiply" />
+        <div className="absolute inset-0 rounded-full shadow-[inset_0_-10px_20px_rgba(0,0,0,0.1)] pointer-events-none mix-blend-multiply" />
       </motion.div>
 
       {/* TOP CONTENT */}
       <div className="flex flex-col items-center text-center mb-10 xl:mb-[48px]">
-        <h2 className="font-['Inter'] font-medium text-[36px] sm:text-[48px] xl:text-[62.8px] leading-[1.1] xl:leading-[76px] tracking-tight xl:tracking-[-2.04px] text-[#05080C]">
+        <h2 className=" font-medium text-[36px] sm:text-[48px] xl:text-[62.8px] leading-[1.1] xl:leading-[76px] tracking-tight xl:tracking-[-2.04px] text-[#05080C]">
           Capture the moments
         </h2>
         <div className="mt-4 xl:mt-6 max-w-[90%] sm:max-w-[80%] md:max-w-[678px] text-[#5B5B5B] text-[14px] sm:text-[15px] xl:text-[16.3px] leading-[1.5] xl:leading-[26px]">
@@ -154,12 +153,12 @@ export function PortfolioPreviewSection() {
             </div>
 
             {/* Content Wrap */}
-            <div className="mt-6 xl:mt-[32px] border-b border-[#E2E2E3] pb-4 transition-colors duration-300 group-hover:border-[#05080C]">
-              <h4 className="font-['Inter'] font-medium text-[24px] sm:text-[28px] xl:text-[30.1px] leading-[1.3] xl:leading-[40px] tracking-tight xl:tracking-[-1px] text-[#05080C]">
+            <div className="mt-4 xl:mt-[22px] border-b border-[#E2E2E3] pb-2 transition-colors duration-300 ">
+              <h4 className=" font-medium text-[24px] sm:text-[28px] xl:text-[30.1px] leading-[1.3] xl:leading-[40px] tracking-tight xl:tracking-[-1px] text-[#05080C]">
                 {item.title}
               </h4>
             </div>
-            <div className="mt-4 flex gap-1 font-['Inter'] text-[14px] xl:text-[16.5px] text-[#5B5B5B]">
+            <div className="mt-2 flex gap-1  text-[14px] xl:text-[16.5px] text-[#5B5B5B] border-b border-[#E2E2E3] pb-2 transition-colors duration-300 ">
               <span>{item.category},</span>
               <span>{item.date}</span>
             </div>

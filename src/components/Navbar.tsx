@@ -64,7 +64,7 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
           <div className="xl:absolute xl:left-[22%] ml-[4%] lg:ml-[8%]">
             <Link
               to="/portfolio"
-              activeProps={{ className: "underline decoration-1 underline-offset-[12px] opacity-100" }}
+              activeProps={{ className: "active-nav-link opacity-100" }}
               className={`underline-grow whitespace-nowrap tracking-wide ${hoverColor} transition-colors`}
             >
               SELECTED WORK
@@ -76,7 +76,7 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
               <li key={link.name}>
                 <Link 
                   to={link.href} 
-                  activeProps={{ className: "underline decoration-1 underline-offset-[12px] opacity-100" }}
+                  activeProps={{ className: "active-nav-link opacity-100" }}
                   className={`underline-grow whitespace-nowrap tracking-wide ${hoverColor} transition-colors`}
                 >
                   {link.name}
@@ -132,8 +132,8 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
                     <Link 
                       to="/about" 
                       onClick={() => setIsOpen(false)}
-                      activeProps={{ className: "underline decoration-1 underline-offset-[12px] opacity-100" }}
-                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase"
+                      activeProps={{ className: "active-nav-link opacity-100" }}
+                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase underline-grow"
                     >
                       ABOUT ME
                     </Link>
@@ -142,8 +142,8 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
                     <Link 
                       to="/blog" 
                       onClick={() => setIsOpen(false)}
-                      activeProps={{ className: "underline decoration-1 underline-offset-[12px] opacity-100" }}
-                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase"
+                      activeProps={{ className: "active-nav-link opacity-100" }}
+                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase underline-grow"
                     >
                       BLOG
                     </Link>
@@ -152,8 +152,8 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
                     <Link 
                       to="/contact" 
                       onClick={() => setIsOpen(false)}
-                      activeProps={{ className: "underline decoration-1 underline-offset-[12px] opacity-100" }}
-                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase"
+                      activeProps={{ className: "active-nav-link opacity-100" }}
+                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase underline-grow"
                     >
                       CONTACT
                     </Link>
@@ -162,8 +162,8 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
                     <Link 
                       to="/portfolio" 
                       onClick={() => setIsOpen(false)}
-                      activeProps={{ className: "underline decoration-1 underline-offset-[12px] opacity-100" }}
-                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase"
+                      activeProps={{ className: "active-nav-link opacity-100" }}
+                      className="text-white text-[22px] font-bold tracking-tighter hover:text-white/80 transition-opacity opacity-100 uppercase underline-grow"
                     >
                       SELECTED WORK  [ 20 ]
                     </Link>

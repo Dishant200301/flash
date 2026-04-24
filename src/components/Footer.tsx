@@ -32,71 +32,56 @@ export function Footer() {
       <div className="px-4 sm:px-6 lg:px-12 pt-12 lg:pt-[48px] pb-12 lg:pb-0">
 
         {/* Footer Top Wrapper */}
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-0 min-h-auto lg:min-h-[260px]">
+        <div className="flex flex-col md:grid md:grid-cols-3 items-start justify-between gap-12 md:gap-4 xl:gap-0 min-h-auto md:min-h-[260px]">
 
-          {/* Footer Left Menu Wrapper */}
-          <div className="w-full lg:w-[362px] flex-shrink-0">
-            {/* "Links" label */}
-            <span className="block font-normal text-[13px] sm:text-[14.5px] leading-[24px] text-[#999999] mb-6 lg:mb-[48px]">
+          {/* Column 1: Links (Left) */}
+          <div className="w-full">
+            <span className="block font-normal text-[13px] sm:text-[14.5px] leading-[24px] text-[#999999] mb-6 xl:mb-[48px]">
               Links
             </span>
-
-            {/* Footer Links Wrapper — two columns */}
-            <div className="flex justify-between sm:justify-start gap-12 sm:gap-[140px] lg:gap-0">
-              {/* Col A */}
-              <div className="flex flex-col gap-4 w-[100px] lg:w-[80px]">
-                {colA.map((link) => (
-                  <Link
-                    key={link.to}
-                    to={link.to}
-                    className="footer-nav-link text-[16px] sm:text-[18px] lg:text-[22.1px] font-medium leading-[32px] tracking-tight text-white no-underline whitespace-nowrap"
-                    activeProps={{ className: "underline" }}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-
-
+            <div className="flex flex-col gap-4">
+              {colA.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="footer-nav-link text-[16px] sm:text-[18px] lg:text-[22.1px] font-medium leading-[32px] tracking-tight text-white no-underline whitespace-nowrap w-fit"
+                  activeProps={{ className: "underline" }}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Footer Right Menu Wrapper */}
-          <div className="w-full lg:flex-1 lg:max-w-[900px] flex flex-col lg:flex-row items-start gap-12 lg:gap-0">
-
-            {/* Social Links */}
-            <div className="w-full lg:flex-1 mt-4 julg:mt-0">
-              {/* "Social Media" label */}
-              <span className="block font-normal text-[13px] sm:text-[14.6px] leading-[24px] text-[#999999] mb-6 lg:mb-[48px]">
-                Social Media
-              </span>
-
-              {/* Social rows */}
-              <div className="flex flex-col w-full">
-                {socials.map((social, idx) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`footer-social-row flex items-center justify-between h-[44px] no-underline border-b border-white/10 ${idx === 0 ? "border-t" : ""}`}
-                  >
-                    <span className="footer-social-link text-[16px] sm:text-[18px] lg:text-[22.3px] font-medium leading-[32px] tracking-tight text-white relative inline-block">
-                      {social.label}
-                    </span>
-
-                    {/* Icon box */}
-                    <div className="footer-icon-box w-8 h-8 rounded-[4px] bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-colors">
-                      <ArrowUpRight />
-                    </div>
-                  </a>
-                ))}
-              </div>
+          {/* Column 2: Social Media (Center) */}
+          <div className="w-full xl:max-w-[440px] xl:mx-auto">
+            <span className="block font-normal text-[13px] sm:text-[14.6px] leading-[24px] text-[#999999] mb-6 xl:mb-[48px] md:text-center">
+              Social Media
+            </span>
+            <div className="flex flex-col w-full">
+              {socials.map((social, idx) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`footer-social-row flex items-center justify-between h-[44px] no-underline border-b border-white/10 ${idx === 0 ? "border-t" : ""}`}
+                >
+                  <span className="footer-social-link text-[16px] sm:text-[18px] lg:text-[22.3px] font-medium leading-[32px] tracking-tight text-white relative inline-block">
+                    {social.label}
+                  </span>
+                  <div className="footer-icon-box w-8 h-8 rounded-[4px] bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-colors">
+                    <ArrowUpRight />
+                  </div>
+                </a>
+              ))}
             </div>
+          </div>
 
-            {/* Contact Me Button */}
-            <div className="mt-8 lg:mt-0 lg:ml-4 lg:pt-[72px]">
-              <MagnetButton
+          {/* Column 3: Contact Button (Right) */}
+          <div className="w-full flex md:justify-end xl:pt-[72px] mt-8 md:mt-0 xl:mt-0">
+            <div className="w-fit md:pt-[72px] xl:pt-0">
+               <MagnetButton
                 to="/contact"
                 text="Contact Me"
                 variant="dark"
@@ -119,10 +104,10 @@ export function Footer() {
         {/* Copyright Bar */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-2 sm:gap-4 py-8 lg:pb-[48px] lg:pt-0 border-t border-white/5 lg:border-t-0 mt-8 lg:mt-0">
           <p className="font-medium text-[13px] sm:text-[14px] lg:text-[16.5px] leading-[1.5] lg:leading-[26px] text-white text-center lg:text-left">
-            Designed by Designkuthir . Powered by Framer
+            Designed by <a href="https://tryzeniq.com/" target="_blank" rel="noopener noreferrer" className="hover:underline text-white">TryzenIQ</a>
           </p>
           <p className="font-medium text-[13px] sm:text-[14px] lg:text-[16.6px] leading-[1.5] lg:leading-[26px] text-white text-center lg:text-right">
-            ©2025 FLASH . All rights reserved.
+            ©{new Date().getFullYear()} FLASH . All rights reserved.
           </p>
         </div>
 
