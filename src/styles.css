@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @config "../tailwind.config.js";
 @source "../src";
@@ -5,9 +6,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* RAKU'25 — Cinematic photography portfolio design system. */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+/* FLASH — Cinematic photography portfolio design system. */
 
 @theme inline {
   --font-sans: "Inter Tight", sans-serif;
@@ -65,7 +64,7 @@
 :root {
   --radius: 0.875rem;
 
-  /* RAKU'25 cinematic palette. Dark editorial. */
+  /* FLASH cinematic palette. Dark editorial. */
   --background: oklch(0.06 0.005 260);          /* near pure black */
   --foreground: oklch(0.985 0 0);                /* white */
   --surface: oklch(0.09 0.008 260);              /* dark card */

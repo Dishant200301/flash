@@ -1,7 +1,7 @@
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import { ScrollToTop } from "../lib/scroll-to-top";
+import { ScrollToTop } from "../lib/ScrollToTop";
 import { NotFoundPage } from "../components/NotFound";
 
 export const Route = createRootRoute({

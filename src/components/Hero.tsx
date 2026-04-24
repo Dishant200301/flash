@@ -2,7 +2,7 @@ import { Navbar } from "./Navbar";
 import { motion } from "framer-motion";
 
 /**
- * RAKU'25 Cinematic Hero - PIXEL PERFECT ARCHITECTURE
+ * FLASH Cinematic Hero - PIXEL PERFECT ARCHITECTURE
  * Fully updated with provided CSS coordinates and Tailwind-first approach.
  * Design Parity: Reference Image 1
  */
