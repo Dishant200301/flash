@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useSpring } from "framer-motion";
-import { portfolioItems } from "../../data/portfolio";
+import { portfolioItems } from "@/data/portfolio";
 import { PortfolioCard } from "./PortfolioCard";
 
 export function PortfolioListSection() {

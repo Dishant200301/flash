@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { BlogPost, blogPosts } from "../../data/blog";
+import { BlogPost, blogPosts } from "@/data/blog";
 
 // --- Sub-Components ---
 function ArrowIcon({ className }: { className?: string }) {

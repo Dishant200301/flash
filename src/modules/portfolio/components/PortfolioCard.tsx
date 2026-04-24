@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { PortfolioItem } from "../../data/portfolio";
+import { PortfolioItem } from "@/data/portfolio";
 
 interface PortfolioCardProps {
   item: PortfolioItem;

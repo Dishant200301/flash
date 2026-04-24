@@ -1,17 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Hero } from "../components/Hero";
-import { AboutIntroSection } from "../components/home/AboutIntroSection";
-import { ServicesSection } from "../components/home/ServicesSection";
-import { WhyChooseSection } from "../components/home/WhyChooseSection";
-import { PortfolioPreviewSection } from "../components/home/PortfolioPreviewSection";
-import { ProcessSection } from "../components/home/ProcessSection";
-import { CtaSection } from "../components/home/CtaSection";
-import { TestimonialsSection } from "../components/home/TestimonialsSection";
-import { FaqSection } from "../components/home/FaqSection";
-import { BlogSection } from "../components/home/BlogSection";
-import { GetInTouchSection } from "../components/home/GetInTouchSection";
-import { Footer } from "../components/Footer";
-import { useRevealOnScroll } from "../lib/use-reveal";
+import { HomePage } from "@/modules/home/home";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,25 +18,5 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: "/images/home/hero.webp" },
     ],
   }),
-  component: Index,
+  component: HomePage,
 });
-
-function Index() {
-  const ref = useRevealOnScroll<HTMLDivElement>();
-  return (
-    <main ref={ref} className="bg-background text-foreground">
-      <Hero />
-      <AboutIntroSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <PortfolioPreviewSection />
-      <ProcessSection />
-      <CtaSection />
-      <TestimonialsSection />
-      <FaqSection />
-      <BlogSection />
-      <GetInTouchSection />
-      <Footer />
-    </main>
-  );
-}

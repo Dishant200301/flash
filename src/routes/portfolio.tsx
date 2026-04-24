@@ -1,17 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PortfolioHeroSection } from "../components/portfolio/PortfolioHeroSection";
-import { PortfolioListSection } from "../components/portfolio/PortfolioListSection";
-import { Footer } from "../components/Footer";
-
-function PortfolioPage() {
-  return (
-    <main className="bg-white text-[#05080C] overflow-hidden">
-      <PortfolioHeroSection />
-      <PortfolioListSection />
-      <Footer />
-    </main>
-  );
-}
+import { PortfolioPage } from "@/modules/portfolio/portfolio";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({

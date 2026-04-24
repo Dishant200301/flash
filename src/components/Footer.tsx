@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MagnetButton } from "@/components/ui/MagnetButton";
+import { CornerDownRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const colA = [
   { to: "/", label: "Home", active: true },
@@ -14,15 +16,6 @@ const socials = [
   { label: "Facebook", href: "#" },
   { label: "LinkedIn", href: "#" },
 ] as const;
-
-function ArrowUpRight() {
-  return (
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"
-        stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 export function Footer() {
   return (
@@ -62,20 +55,29 @@ export function Footer() {
             </span>
             <div className="flex flex-col w-full">
               {socials.map((social, idx) => (
-                <a
+                <motion.a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`footer-social-row flex items-center justify-between h-[44px] no-underline border-b border-white/10 ${idx === 0 ? "border-t" : ""}`}
+                  initial="initial"
+                  whileHover="hover"
+                  className="footer-social-row group flex items-center justify-between h-[56px] px-4 no-underline border-b border-white/10"
                 >
                   <span className="footer-social-link text-[16px] sm:text-[18px] lg:text-[22.3px] font-medium leading-[32px] tracking-tight text-white relative inline-block">
                     {social.label}
+                    <span className="absolute bottom-[-1px] left-0 w-full h-[1.5px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   </span>
-                  <div className="footer-icon-box w-8 h-8 rounded-[4px] flex items-center justify-center shrink-0">
-                    <ArrowUpRight />
-                  </div>
-                </a>
+                  
+                  <motion.div 
+                    variants={{
+                      initial: { backgroundColor: "transparent", color: "#ffffff" },
+                    }}
+                    className="footer-icon-box w-9 h-9 rounded-[4px] border flex items-center justify-center shrink-0 transition-colors duration-300"
+                  >
+                    <CornerDownRight className="w-[18px] h-[18px]" />
+                  </motion.div>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -149,38 +151,26 @@ export function Footer() {
         }
 
         /* ── Social rows ── */
-        .footer-social-link { position: relative; }
-        .footer-social-link::after {
-          content: "";
-          position: absolute;
-          bottom: -1px;
-          left: 0;
-          width: 100%;
-          height: 1.5px;
-          background: #ffffff;
-          transform: scaleX(0);
-          transform-origin: right center;
-          transition: transform 400ms cubic-bezier(0.77, 0, 0.175, 1);
+        .footer-social-row {
+          border-left: 1px solid transparent;
+          border-right: 1px solid transparent;
+          transition: border-color 200ms ease, background-color 200ms ease;
+          border-radius: 6px;
+          margin-bottom: 2px;
+          position: relative;
         }
-        .footer-social-row:hover .footer-social-link::after {
-          transform: scaleX(1);
-          transform-origin: left center;
+        .footer-social-row:hover {
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          background: rgba(255, 255, 255, 0.04);
+          z-index: 10;
         }
-
-        /* ── Social icon box ── */
-        .footer-icon-box {
-          color: #ffffff;
-          border: 1.5px solid rgba(255, 255, 255, 0.30);
-          background: transparent;
-          transition: background 280ms ease, border-color 280ms ease, color 280ms ease;
-        }
-        /* On row hover: fill box fully white, arrow turns dark */
-        .footer-social-row:hover .footer-icon-box {
-          background: #ffffff;
-          border-color: #ffffff;
-          color: #05080C;
+        /* Remove the default separator when hovered to avoid overlap */
+        .footer-social-row:hover {
+          border-bottom-color: rgba(255, 255, 255, 0.25);
         }
       `}</style>
     </footer>
   );
 }
+
+

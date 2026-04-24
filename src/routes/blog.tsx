@@ -1,10 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
-import { BlogHeroSection } from "../components/blog/BlogHeroSection";
-import { Footer } from "../components/Footer";
-import { BlogGrid } from "../components/blog/BlogGrid";
-import { useRevealOnScroll } from "../lib/use-reveal";
+import { createFileRoute } from "@tanstack/react-router";
+import { BlogPage } from "@/modules/blog/blog";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -25,16 +20,3 @@ export const Route = createFileRoute("/blog")({
   }),
   component: BlogPage,
 });
-
-function BlogPage() {
-  const ref = useRevealOnScroll<HTMLElement>();
-  return (
-    <main className="bg-background text-foreground" ref={ref}>
-      <BlogHeroSection />
-
-      <BlogGrid />
-
-      <Footer />
-    </main>
-  );
-}

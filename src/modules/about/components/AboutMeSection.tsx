@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CornerDownRight } from "lucide-react";
-import { MagnetButton } from "../ui/MagnetButton";
+import { MagnetButton } from "@/components/ui/MagnetButton";
 
 // Magnet Button Wrapper
 function MagnetWrapper({ children, className, style, to }: any) {

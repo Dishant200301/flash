@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 
-import { BlogPost, blogPosts as posts } from "../../data/blog";
+import { BlogPost, blogPosts as posts } from "@/data/blog";
 
 export function BlogSection() {
   return (

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { MagnetButton } from "../ui/MagnetButton";
-import { useCountUp } from "../../lib/use-reveal";
+import { MagnetButton } from "@/components/ui/MagnetButton";
+import { useCountUp } from "@/lib/use-reveal";
 import { useNavigate } from "@tanstack/react-router";
 
 interface AboutCardData {

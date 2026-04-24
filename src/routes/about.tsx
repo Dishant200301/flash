@@ -1,10 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AboutHeroSection } from "../components/about/AboutHeroSection";
-import { AboutMeSection } from "../components/about/AboutMeSection";
-import { MyStorySection } from "../components/about/MyStorySection";
-import { MyApproachSection } from "../components/about/MyApproachSection";
-import { GearSoftwareSection } from "../components/about/GearSoftwareSection";
-import { Footer } from "../components/Footer";
+import { AboutPage } from "@/modules/about/about";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -25,16 +20,3 @@ export const Route = createFileRoute("/about")({
   }),
   component: AboutPage,
 });
-
-function AboutPage() {
-  return (
-    <main className="bg-background text-foreground">
-      <AboutHeroSection />
-      <AboutMeSection />
-      <MyApproachSection />
-      <MyStorySection />
-      <GearSoftwareSection />
-      <Footer />
-    </main>
-  );
-}

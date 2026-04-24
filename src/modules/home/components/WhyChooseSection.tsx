@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useCountUp } from "../../lib/use-reveal";
+import { useCountUp } from "@/lib/use-reveal";
 import { useRef, useEffect, useState } from "react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 

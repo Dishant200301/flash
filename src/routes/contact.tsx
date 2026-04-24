@@ -1,10 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
-import { Toaster } from "../components/ui/sonner";
-import { ContactHeroSection } from "../components/contact/ContactHeroSection";
-import { ContactSection } from "../components/contact/ContactSection";
-import { ContactInfoSection } from "../components/home/ContactInfoSection";
+import { ContactPage } from "@/modules/contact/contact";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -24,15 +19,3 @@ export const Route = createFileRoute("/contact")({
   }),
   component: ContactPage,
 });
-
-function ContactPage() {
-  return (
-    <main className="relative bg-[#05080c] min-h-screen overflow-hidden" style={{ fontFamily: "'Inter', sans-serif" }}>
-      <Toaster />
-      <ContactHeroSection />
-      <ContactInfoSection />
-      <ContactSection />
-      <Footer />
-    </main>
-  );
-}
