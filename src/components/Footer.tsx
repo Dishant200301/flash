@@ -8,7 +8,6 @@ const colA = [
   { to: "/blog", label: "Blog" },
 ] as const;
 
-
 const socials = [
   { label: "Instagram", href: "#" },
   { label: "Twitter", href: "#" },
@@ -20,7 +19,7 @@ function ArrowUpRight() {
   return (
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"
-        stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+        stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -29,14 +28,14 @@ export function Footer() {
   return (
     <footer className="w-full bg-[#05080C] text-white relative">
       {/* Footer Content Wrapper */}
-      <div className="px-4 sm:px-6 lg:px-12 pt-12 lg:pt-[48px] pb-12 lg:pb-0">
+      <div className="px-4 sm:px-4 lg:px-4 max-w-[1450px] mx-auto pt-12 lg:pt-[48px] pb-12 lg:pb-0">
 
         {/* Footer Top Wrapper */}
         <div className="flex flex-col md:grid md:grid-cols-3 items-start justify-between gap-12 md:gap-4 xl:gap-0 min-h-auto md:min-h-[260px]">
 
           {/* Column 1: Links (Left) */}
           <div className="w-full">
-            <span className="block font-normal text-[13px] sm:text-[14.5px] leading-[24px] text-[#999999] mb-6 xl:mb-[48px]">
+            <span className="block font-normal text-[13px] sm:text-[14.5px] leading-[24px] text-[#999999] mb-6 xl:mb-[20px]">
               Links
             </span>
             <div className="flex flex-col gap-4">
@@ -45,7 +44,10 @@ export function Footer() {
                   key={link.to}
                   to={link.to}
                   className="footer-nav-link text-[16px] sm:text-[18px] lg:text-[22.1px] font-medium leading-[32px] tracking-tight text-white no-underline whitespace-nowrap w-fit"
-                  activeProps={{ className: "underline" }}
+                  activeProps={{
+                    className:
+                      "footer-nav-link footer-nav-link--active text-[16px] sm:text-[18px] lg:text-[22.1px] font-medium leading-[32px] tracking-tight text-white no-underline whitespace-nowrap w-fit",
+                  }}
                 >
                   {link.label}
                 </Link>
@@ -53,9 +55,9 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Social Media (Center) */}
-          <div className="w-full xl:max-w-[440px] xl:mx-auto">
-            <span className="block font-normal text-[13px] sm:text-[14.6px] leading-[24px] text-[#999999] mb-6 xl:mb-[48px] md:text-center">
+          {/* Column 2: Social Media — LEFT aligned */}
+          <div className="w-full">
+            <span className="block font-normal text-[13px] sm:text-[14.6px] leading-[24px] text-[#999999] mb-6 xl:mb-[20px]">
               Social Media
             </span>
             <div className="flex flex-col w-full">
@@ -70,7 +72,7 @@ export function Footer() {
                   <span className="footer-social-link text-[16px] sm:text-[18px] lg:text-[22.3px] font-medium leading-[32px] tracking-tight text-white relative inline-block">
                     {social.label}
                   </span>
-                  <div className="footer-icon-box w-8 h-8 rounded-[4px] bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-colors">
+                  <div className="footer-icon-box w-8 h-8 rounded-[4px] flex items-center justify-center shrink-0">
                     <ArrowUpRight />
                   </div>
                 </a>
@@ -81,7 +83,7 @@ export function Footer() {
           {/* Column 3: Contact Button (Right) */}
           <div className="w-full flex md:justify-end xl:pt-[72px] mt-8 md:mt-0 xl:mt-0">
             <div className="w-fit md:pt-[72px] xl:pt-0">
-               <MagnetButton
+              <MagnetButton
                 to="/contact"
                 text="Contact Me"
                 variant="dark"
@@ -103,18 +105,19 @@ export function Footer() {
 
         {/* Copyright Bar */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-2 sm:gap-4 py-8 lg:pb-[48px] lg:pt-0 border-t border-white/5 lg:border-t-0 mt-8 lg:mt-0">
-          <p className="font-medium text-[13px] sm:text-[14px] lg:text-[16.5px] leading-[1.5] lg:leading-[26px] text-white text-center lg:text-left">
+          <p className="font-medium text-[13px] sm:text-[14px] lg:text-[16.5px] leading-normal lg:leading-[26px] text-white text-center lg:text-left">
             Designed by <a href="https://tryzeniq.com/" target="_blank" rel="noopener noreferrer" className="hover:underline text-white">TryzenIQ</a>
           </p>
-          <p className="font-medium text-[13px] sm:text-[14px] lg:text-[16.6px] leading-[1.5] lg:leading-[26px] text-white text-center lg:text-right">
+          <p className="font-medium text-[13px] sm:text-[14px] lg:text-[16.6px] leading-normal lg:leading-[26px] text-white text-center lg:text-right">
             ©{new Date().getFullYear()} FLASH . All rights reserved.
           </p>
         </div>
 
       </div>
 
-      {/* CSS for hover animations */}
+      {/* CSS for hover & active animations */}
       <style>{`
+        /* ── Nav Links ── */
         .footer-nav-link { position: relative; }
         .footer-nav-link::after {
           content: "";
@@ -122,17 +125,30 @@ export function Footer() {
           bottom: -1px;
           left: 0;
           width: 100%;
-          height: 1px;
+          height: 1.5px;
           background: #ffffff;
           transform: scaleX(0);
           transform-origin: right center;
           transition: transform 400ms cubic-bezier(0.77, 0, 0.175, 1);
         }
+        /* Hover: animate underline in from left */
         .footer-nav-link:hover::after {
           transform: scaleX(1);
           transform-origin: left center;
         }
+        /* Active (current page): underline always visible, no animation */
+        .footer-nav-link--active::after {
+          transform: scaleX(1) !important;
+          transform-origin: left center !important;
+          transition: none !important;
+        }
+        /* Make sure native browser underline is never shown */
+        .footer-nav-link,
+        .footer-nav-link--active {
+          text-decoration: none !important;
+        }
 
+        /* ── Social rows ── */
         .footer-social-link { position: relative; }
         .footer-social-link::after {
           content: "";
@@ -140,7 +156,7 @@ export function Footer() {
           bottom: -1px;
           left: 0;
           width: 100%;
-          height: 1px;
+          height: 1.5px;
           background: #ffffff;
           transform: scaleX(0);
           transform-origin: right center;
@@ -151,8 +167,18 @@ export function Footer() {
           transform-origin: left center;
         }
 
+        /* ── Social icon box ── */
+        .footer-icon-box {
+          color: #ffffff;
+          border: 1.5px solid rgba(255, 255, 255, 0.30);
+          background: transparent;
+          transition: background 280ms ease, border-color 280ms ease, color 280ms ease;
+        }
+        /* On row hover: fill box fully white, arrow turns dark */
         .footer-social-row:hover .footer-icon-box {
-          background: rgba(255,255,255,0.15);
+          background: #ffffff;
+          border-color: #ffffff;
+          color: #05080C;
         }
       `}</style>
     </footer>

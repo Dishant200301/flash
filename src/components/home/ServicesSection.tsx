@@ -38,7 +38,7 @@ export function ServicesSection() {
         <h2 className="text-[36px] sm:text-[48px] xl:text-[62.4px] leading-[1.1] xl:leading-[76px] font-medium tracking-tight xl:tracking-[-2.04px] text-[#05080C]">
           How i can help you
         </h2>
-        <div className="mt-4 text-[15px] sm:text-[16px] xl:text-[16.3px] leading-[1.5] xl:leading-[26px] text-[#5B5B5B] max-w-[90%] sm:max-w-[620px]">
+        <div className="mt-4 text-[15px] sm:text-[16px] xl:text-[16.3px] leading-normal xl:leading-[26px] text-[#5B5B5B] max-w-[90%] sm:max-w-[620px]">
           <p className="inline sm:block">I capture authentic moments & emotions, turning your special occasions into </p>
           <p className="inline sm:block">timeless memories you'll cherish forever.</p>
         </div>

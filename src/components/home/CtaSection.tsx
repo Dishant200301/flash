@@ -33,7 +33,7 @@ export function CtaSection() {
       {/* Left Image */}
       <motion.div 
         style={{ x: leftX }}
-        className="relative w-full xl:w-[32%] aspect-[4/3] sm:aspect-[16/9] xl:aspect-[2400/2640] max-w-none xl:max-w-[600px] flex-shrink-0 overflow-hidden rounded-sm xl:rounded-sm"
+        className="relative w-full xl:w-[32%] aspect-4/3 sm:aspect-video xl:aspect-2400/2640 max-w-none xl:max-w-[600px] shrink-0 overflow-hidden rounded-sm xl:rounded-sm"
       >
         <img 
           src="https://framerusercontent.com/images/8oQLL3ZLStdkVC04APCQ1xlEdd8.png" 
@@ -59,7 +59,7 @@ export function CtaSection() {
         </div>
 
         <p 
-          className="text-[#5b5b5b] text-[14px] sm:text-[16.5px] leading-[1.5] xl:leading-[26px] mb-8 xl:mb-[32px] max-w-full sm:max-w-[460px] mx-auto px-4 xl:px-0"
+          className="text-[#5b5b5b] text-[14px] sm:text-[16.5px] leading-normal xl:leading-[26px] mb-8 xl:mb-[32px] max-w-full sm:max-w-[460px] mx-auto px-4 xl:px-0"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
           Choose your preferred date and photography package. I'll confirm availability and lock in your booking.
@@ -76,7 +76,7 @@ export function CtaSection() {
       {/* Right Image */}
       <motion.div 
         style={{ x: rightX }}
-        className="relative w-full xl:w-[32%] aspect-[4/3] sm:aspect-[16/9] xl:aspect-[2400/2640] max-w-none xl:max-w-[600px] flex-shrink-0 overflow-hidden rounded-sm xl:rounded-sm"
+        className="relative w-full xl:w-[32%] aspect-4/3 sm:aspect-video xl:aspect-2400/2640 max-w-none xl:max-w-[600px] shrink-0 overflow-hidden rounded-sm xl:rounded-sm"
       >
         <img 
           src="https://framerusercontent.com/images/30ZPuPTzpmvgNmLnx6cXgGN38KE.png" 

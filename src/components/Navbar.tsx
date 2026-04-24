@@ -51,11 +51,11 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
   ];
 
   return (
-    <header className={` top-0 left-0 right-0 z-[100]  py-4 px-4 ${textColor}`}>
+    <header className={` top-0 left-0 right-0 z-100  py-4 px-4 ${textColor}`}>
       <nav className="flex items-center justify-between gap-8 text-[18px] leading-[26px] font-medium font-sans-tight">
         
         {/* Logo */}
-        <Link to="/" className="flex flex-col gap-0.5 group relative z-[110]">
+        <Link to="/" className="flex flex-col gap-0.5 group relative z-110">
           <span className={`block text-xl font-bold tracking-tighter leading-none`}>FLASH</span>
         </Link>
 
@@ -96,7 +96,7 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
         {/* Mobile Toggle */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="xl:hidden relative z-[110] w-12 h-12 bg-white rounded-full flex flex-col items-center justify-center gap-[6px] text-black shadow-lg transition-transform active:scale-95"
+          className="xl:hidden relative z-110 w-12 h-12 bg-white rounded-full flex flex-col items-center justify-center gap-[6px] text-black shadow-lg transition-transform active:scale-95"
           aria-label="Toggle menu"
         >
           {isOpen ? (
@@ -123,7 +123,7 @@ export function Navbar({ theme = "dark" }: NavbarProps) {
               initial="closed"
               animate="open"
               exit="closed"
-              className="fixed inset-0 bg-[#05080C] z-[100] flex flex-col xl:hidden overflow-hidden"
+              className="fixed inset-0 bg-[#05080C] z-100 flex flex-col xl:hidden overflow-hidden"
             >
               {/* Menu Links */}
               <div className="flex-1 flex flex-col items-center justify-center">

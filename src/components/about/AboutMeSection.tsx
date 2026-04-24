@@ -61,7 +61,7 @@ export function AboutMeSection() {
 
           {/* Middle Content Wrap (Text + Button) */}
           <div className="relative xl:absolute xl:bottom-[240px] left-0 w-full h-auto xl:h-[96px] flex flex-col sm:flex-row xl:items-end justify-between gap-6 sm:gap-4 xl:gap-0">
-            <p className="w-full xl:w-[515px] sm:flex-1 xl:flex-none text-[18px] sm:text-[20px] xl:text-[22.1px] leading-[1.4] sm:leading-[1.5] xl:leading-[32px] font-medium tracking-tight xl:tracking-[-1px] font-['Inter',sans-serif] text-[#05080C]">
+            <p className="w-full xl:w-[515px] sm:flex-1 xl:flex-none text-[18px] sm:text-[20px] xl:text-[22.1px] leading-[1.4] sm:leading-normal xl:leading-[32px] font-medium tracking-tight xl:tracking-[-1px] font-['Inter',sans-serif] text-[#05080C]">
               Hey, I'm FLASH, a passionate photographer based in London. I focus on portraits and Wedding photography, and I genuinely enjoy capturing all kinds of unique stories.
             </p>
             
@@ -85,7 +85,7 @@ export function AboutMeSection() {
         </div>
 
         {/* Right Column - Image Wrap - Desktop: Absolute, Mobile: Relative/Flex (Order controlled via flex) */}
-        <div className="hidden xl:block relative xl:absolute top-0 right-0 xl:right-[48px] w-full xl:w-[460px] h-auto sm:h-[450px] aspect-[4/5] sm:aspect-auto xl:h-[584px] mt-10 sm:mt-12 xl:mt-0 order-first xl:order-none">
+        <div className="hidden xl:block relative xl:absolute top-0 right-0 xl:right-[48px] w-full xl:w-[460px] h-auto sm:h-[450px] aspect-4/5 sm:aspect-auto xl:h-[584px] mt-10 sm:mt-12 xl:mt-0 order-first xl:order-0">
           <div className="relative w-full h-full rounded-[8px] overflow-hidden bg-gray-100">
             <img 
               src="/images/about/about_me.webp" 

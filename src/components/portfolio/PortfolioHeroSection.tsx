@@ -11,7 +11,7 @@ export function PortfolioHeroSection() {
       scaleX: 0,
       transition: {
         duration: 1.1,
-        ease: [0.76, 0, 0.24, 1],
+        ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
         delay: 0.15 + i * 0.05,
       },
     }),
@@ -26,7 +26,7 @@ export function PortfolioHeroSection() {
       y: 0,
       transition: {
         duration: 1.5,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
         delay: 0.8
       }
     }
@@ -60,14 +60,14 @@ export function PortfolioHeroSection() {
 
           {/* Top Right Info Block */}
           <div className="absolute right-[5%] xl:right-[3%] top-[15dvh] sm:top-[25dvh] xl:top-[32dvh] max-w-[90%] sm:max-w-[400px] xl:max-w-[540px] text-right">
-            <p className="font-['Inter_Tight',_sans-serif] text-[13px] sm:text-[16px] xl:text-[18px] leading-[1.5] xl:leading-[26px] font-normal text-white uppercase tracking-wide mb-[24px] xl:mb-[32px]">
+            <p className="font-['Inter_Tight',sans-serif] text-[13px] sm:text-[16px] xl:text-[18px] leading-normal xl:leading-[26px] font-normal text-white uppercase tracking-wide mb-[24px] xl:mb-[32px]">
               CAPTURING EMOTIONS WITH ARTISTRY, MY PHOTOGRAPHY EMBRACES WEDDINGS,
               PORTRAITS, AND LIFESTYLE SESSIONS—PRESERVING YOUR STORY WITH ELEGANCE AND
               TIMELESS BEAUTY.
             </p>
             <a
               href="mailto:hello@Raku25.com"
-              className="font-['Inter_Tight',_sans-serif] text-[16px] xl:text-[18px] leading-[26px] font-medium text-white hover:underline transition-opacity"
+              className="font-['Inter_Tight',sans-serif] text-[16px] xl:text-[18px] leading-[26px] font-medium text-white hover:underline transition-opacity"
             >
               hello@Raku25.com
             </a>
@@ -96,7 +96,7 @@ export function PortfolioHeroSection() {
       </div>
 
       {/* 2. PRO VERTICAL BLIND LOADER (Reveal from Left to Right) */}
-      <div className="absolute inset-0 z-[200] flex pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 z-200 flex pointer-events-none overflow-hidden">
         {Array.from({ length: SLAT_COUNT }).map((_, i) => (
           <div key={i} className="h-full relative overflow-hidden flex-1">
             <motion.div

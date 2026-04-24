@@ -24,7 +24,7 @@ function BlogDetailPage() {
       scaleX: 0,
       transition: {
         duration: 1.1,
-        ease: [0.76, 0, 0.24, 1],
+        ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
         delay: 0.15 + i * 0.05,
       },
     }),
@@ -39,11 +39,11 @@ function BlogDetailPage() {
           className="absolute inset-0 z-0 bg-cover bg-center brightness-[0.2] scale-105"
           style={{ backgroundImage: `url(${blog.heroImage})` }}
         />
- <div className="relative z-[50] w-full">
+ <div className="relative z-50 w-full">
           <Navbar theme="dark" />
         </div>
         {/* White Bottom Overlay (Half-Half Effect) */}
-        <div className="absolute bottom-0 left-0 right-0 h-[240px] rotate-sm bg-white z-[2]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[240px] rotate-sm bg-white z-2" />
 
        
 
@@ -67,7 +67,7 @@ function BlogDetailPage() {
 
             {/* Description Lines */}
             <div className="mt-[16px] xl:mt-[24px] w-full max-w-[90%] xl:max-w-[960px]">
-              <p className="text-[14px] sm:text-[16px] xl:text-[16.3px] leading-[1.5] xl:leading-[26px] font-normal text-[#999999] xl:flex xl:flex-col xl:items-center text-center">
+              <p className="text-[14px] sm:text-[16px] xl:text-[16.3px] leading-normal xl:leading-[26px] font-normal text-[#999999] xl:flex xl:flex-col xl:items-center text-center">
                 <span className="block xl:inline">Professional photography elevates business presence, builds trust, strengthens branding, enhances marketing, and attracts</span>
                 <span className="block xl:inline">customers by delivering consistent, high-quality visuals across all platforms.</span>
               </p>
@@ -86,7 +86,7 @@ function BlogDetailPage() {
             {blog.galleryImages.slice(0, 2).map((img, i) => (
               <div
                 key={i}
-                className="w-full xl:w-[830px] aspect-[4/3] sm:aspect-video xl:aspect-auto xl:h-[480px] rounded-[8px] overflow-hidden bg-gray-900 relative"
+                className="w-full xl:w-[830px] aspect-4/3 sm:aspect-video xl:aspect-auto xl:h-[480px] rounded-[8px] overflow-hidden bg-gray-900 relative"
               >
                 <img src={img} className="w-full h-full object-cover" alt="Gallery" />
               </div>
@@ -95,7 +95,7 @@ function BlogDetailPage() {
         </motion.div>
 
         {/* Global Vertical Blind Loader Reveal */}
-        <div className="absolute inset-0 z-[200] flex pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 z-200 flex pointer-events-none overflow-hidden">
           {Array.from({ length: SLAT_COUNT }).map((_, i) => (
             <div key={i} className="h-full relative overflow-hidden flex-1">
               <motion.div
@@ -125,7 +125,7 @@ function BlogDetailPage() {
                   </h4>
 
                   {/* Section Text */}
-                  <p className="text-[16px] sm:text-[18px] leading-[1.5] xl:leading-[26px] font-normal text-[#5B5B5B] mb-6 xl:mb-[44px] max-w-full xl:max-w-[95%]">
+                  <p className="text-[16px] sm:text-[18px] leading-normal xl:leading-[26px] font-normal text-[#5B5B5B] mb-6 xl:mb-[44px] max-w-full xl:max-w-[95%]">
                     {section.text}
                   </p>
 
@@ -160,7 +160,7 @@ function BlogDetailPage() {
 
                   {/* Horizontal Border between sections except last */}
                   {idx < blog.content.length - 1 && (
-                    <div className="w-full h-px bg-[#E2E2E3] mt-[40px] absolute -bottom-[0px]" />
+                    <div className="w-full h-px bg-[#E2E2E3] mt-[40px] absolute bottom-0" />
                   )}
                 </div>
               ))}
@@ -172,7 +172,7 @@ function BlogDetailPage() {
                 <h3 className=" text-[20px] xl:text-[22.1px] leading-[32px] font-normal tracking-[-1px] text-[#05080C] shrink-0">
                   Share Article
                 </h3>
-                <div className="flex flex-wrap gap-[12px] sm:gap-[16px] items-center">
+                <div className="grid grid-cols-5 xl:grid xl:grid-cols-5 gap-[12px] sm:gap-[16px] items-center">
                   {[
                     { icon: <Twitter size={20} />, url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(blog?.title)}&url=${encodeURIComponent(window.location.href)}` },
                     { icon: <Facebook size={20} />, url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}` },

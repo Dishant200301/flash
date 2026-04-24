@@ -25,7 +25,7 @@ export function PortfolioListSection() {
       <AnimatePresence>
         {hoveredCover && (
           <motion.div
-            className="hidden xl:block fixed pointer-events-none z-[9999] rounded-full overflow-hidden"
+            className="hidden xl:block fixed pointer-events-none z-9999 rounded-full overflow-hidden"
             style={{
               left: cursorX,
               top: cursorY,
@@ -71,8 +71,8 @@ export function PortfolioListSection() {
             />
 
             {/* Layer 4: Top Specular Glints */}
-            <div className="absolute top-[4%] left-[10%] w-[50%] h-[15%] rounded-[100%] bg-gradient-to-b from-white/90 to-transparent blur-[2px] rotate-[-15deg] pointer-events-none" />
-            <div className="absolute top-[8%] right-[15%] w-[30%] h-[10%] rounded-[100%] bg-gradient-to-b from-white/60 to-transparent blur-[1px] rotate-[20deg] pointer-events-none" />
+            <div className="absolute top-[4%] left-[10%] w-[50%] h-[15%] rounded-[100%] bg-linear-to-b from-white/90 to-transparent blur-[2px] rotate-[-15deg] pointer-events-none" />
+            <div className="absolute top-[8%] right-[15%] w-[30%] h-[10%] rounded-[100%] bg-linear-to-b from-white/60 to-transparent blur-[1px] rotate-20 pointer-events-none" />
             
             {/* Layer 5: Base Shadowing & Ambient Occlusion */}
             <div className="absolute inset-0 rounded-full shadow-[inset_0_-10px_20px_rgba(0,0,0,0.1)] pointer-events-none mix-blend-multiply" />
@@ -86,10 +86,10 @@ export function PortfolioListSection() {
           Capture the moments
         </h2>
         <div className="flex flex-col items-center gap-1">
-          <p className="text-[14px] sm:text-[16px] xl:text-[16.3px] leading-[1.5] xl:leading-[26px] font-normal text-[#5B5B5B] max-w-[90%] xl:max-w-[700px]">
+          <p className="text-[14px] sm:text-[16px] xl:text-[16.3px] leading-normal xl:leading-[26px] font-normal text-[#5B5B5B] max-w-[90%] xl:max-w-[700px]">
             Discover a carefully curated collection of weddings, portraits, and lifestyle sessions that
           </p>
-          <p className="text-[14px] sm:text-[16px] xl:text-[16.3px] leading-[1.5] xl:leading-[26px] font-normal text-[#5B5B5B] max-w-[90%] xl:max-w-[500px]">
+          <p className="text-[14px] sm:text-[16px] xl:text-[16.3px] leading-normal xl:leading-[26px] font-normal text-[#5B5B5B] max-w-[90%] xl:max-w-[500px]">
             capture authentic emotions & timeless memories beautifully.
           </p>
         </div>

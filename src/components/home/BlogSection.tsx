@@ -17,7 +17,7 @@ export function BlogSection() {
           Latest from blog
         </h2>
         <div className="mt-4 max-w-[90%] sm:max-w-[70%] xl:max-w-[600px]">
-          <p className="text-[14px] sm:text-[15px] xl:text-[16.5px] leading-[1.5] xl:leading-[26px] text-[#5B5B5B]">
+          <p className="text-[14px] sm:text-[15px] xl:text-[16.5px] leading-normal xl:leading-[26px] text-[#5B5B5B]">
             Explore our latest articles, tips, & insights on photography, capturing moments, and creating timeless visual stories.
           </p>
         </div>
@@ -92,7 +92,7 @@ function BlogCard({ post, aspect = "aspect-square" }: { post: BlogPost; aspect?:
         <h4 className="text-[20px] xl:text-[22px] font-medium leading-[1.3] xl:leading-[1.2] text-[#05080c] transition-opacity pb-3 border-b border-[#e2e2e3]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
           {post.title}
         </h4>
-        <div className="flex gap-1 py-2 text-[13px] xl:text-[14px] leading-[1.5] text-[#5b5b5b] border-b border-[#e2e2e3]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
+        <div className="flex gap-1 py-2 text-[13px] xl:text-[14px] leading-normal text-[#5b5b5b] border-b border-[#e2e2e3]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
           <span>{post.category},</span>
           <span className="text-[#05080c]">{post.date}</span>
         </div>

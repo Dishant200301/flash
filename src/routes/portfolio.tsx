@@ -3,6 +3,16 @@ import { PortfolioHeroSection } from "../components/portfolio/PortfolioHeroSecti
 import { PortfolioListSection } from "../components/portfolio/PortfolioListSection";
 import { Footer } from "../components/Footer";
 
+function PortfolioPage() {
+  return (
+    <main className="bg-white text-[#05080C] overflow-hidden">
+      <PortfolioHeroSection />
+      <PortfolioListSection />
+      <Footer />
+    </main>
+  );
+}
+
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
@@ -21,15 +31,3 @@ export const Route = createFileRoute("/portfolio")({
   }),
   component: PortfolioPage,
 });
-
-function AboutPage() {
-  return (
-    <main className="bg-white text-[#05080C] overflow-hidden">
-      <PortfolioHeroSection />
-      <PortfolioListSection />
-      <Footer />
-    </main>
-  );
-}
-
-const PortfolioPage = AboutPage;

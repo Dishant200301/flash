@@ -14,7 +14,7 @@ const slatVariants = {
     scaleX: 0,
     transition: {
       duration: 0.8,
-      ease: [0.76, 0, 0.24, 1],
+      ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
       delay: 0.05 * i,
     },
   }),
@@ -55,25 +55,25 @@ function PortfolioDetailPage() {
           style={{ backgroundImage: `url('/images/home/portfolio/bg.webp')` }}
         />
 
-        <div className="relative z-[100] w-full">
+        <div className="relative z-100 w-full">
           <Navbar theme="dark" />
         </div>
 
         {/* Portflio Details Hero Wrapper */}
-        <div className="relative z-[20] w-full max-w-[1920px] mx-auto px-4 md:px-4 lg:px-[clamp(1rem,4vw,3.5rem)] xl:px-[68px] h-full pt-32 pb-16 lg:pt-0 lg:pb-0 lg:h-[724px] lg:mt-[136px] flex flex-col lg:block">
+        <div className="relative z-20 w-full max-w-[1920px] mx-auto px-4 md:px-4 lg:px-[clamp(1rem,4vw,3.5rem)] xl:px-[68px] h-full pt-32 pb-16 lg:pt-0 lg:pb-0 lg:h-[724px] lg:mt-[136px] flex flex-col lg:block">
 
           {/* Featured Image Wrap */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            className="block lg:absolute lg:right-0 lg:px-0 xl:px-8 top-auto lg:top-1/2 lg:-translate-y-1/2 lg:-mt-[282px] w-full lg:w-[710px] h-[300px] md:h-[450px] lg:h-[360px] rounded-[8px] overflow-hidden z-30 lg:flex lg:items-end lg:justify-center order-1 lg:order-none"
+            className="block lg:absolute lg:right-0 lg:px-4 xl:px-8 top-auto lg:top-1/2 lg:-translate-y-1/2 lg:-mt-[282px] w-full lg:w-[710px] h-[300px] md:h-[450px] lg:h-[360px] rounded-[8px] overflow-hidden z-30 lg:flex lg:items-end lg:justify-center order-1 lg:order-0"
           >
             <img src={project.heroImage} className="w-full h-full object-cover rounded-sm" alt="Featured" />
           </motion.div>
 
           {/* Portflio Details Hero Content Wrapper */}
-          <div className="relative lg:absolute lg:left-0 lg:right-0 xl:left-8 xl:right-8 lg:bottom-4 lg:top-1/2 lg:-translate-y-1/2 lg:mt-[100px] lg:h-[296px] flex flex-col lg:flex-row mt-8 lg:mt-0 order-2 lg:order-none">
+          <div className="relative lg:absolute lg:left-4 lg:right-4 xl:left-8 xl:right-8 lg:bottom-4 lg:top-1/2 lg:-translate-y-1/2 lg:mt-[100px] lg:h-[296px] flex flex-col lg:flex-row mt-8 order-2 lg:order-0">
 
             {/* Left Wrapper: Title & Description */}
             <motion.div
@@ -120,7 +120,7 @@ function PortfolioDetailPage() {
         </div>
 
         {/* Global Vertical Blind Loader Reveal */}
-        <div className="absolute inset-0 z-[200] flex pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 z-200 flex pointer-events-none overflow-hidden">
           {Array.from({ length: SLAT_COUNT }).map((_, i) => (
             <div key={i} className="h-full relative overflow-hidden flex-1">
               <motion.div
@@ -136,29 +136,33 @@ function PortfolioDetailPage() {
       </section>
 
       {/* 2. CONTENT SECTIONS (White Background) */}
-      <section className="bg-white lg:h-auto min-h-screen text-[#05080C] relative py-12 lg:py-40">
-        <div className="w-full max-w-[1450px] lg:max-w-full xl:max-w-[1450px] mx-auto px-4 md:px-4 lg:px-[clamp(1rem,4vw,3.5rem)] xl:px-24 h-full relative flex flex-col lg:block gap-24 lg:gap-0">
+      <section className="bg-white text-[#05080C] py-12 lg:py-20">
+        <div className="w-full max-w-[1450px] mx-auto px-4 md:px-4 lg:px-[clamp(1rem,2vw,3rem)] xl:px-4 flex flex-col gap-12 lg:gap-12">
 
           {/* Intro Section */}
-          <div className="relative lg:absolute lg:top-[80px] lg:left-0 lg:right-0 lg:h-[952px] flex flex-col">
+          <div className="flex flex-col">
             <ContentHeader category="INTRO" title="Understanding the Vision" text={project.sections[0].text} />
-            <div className="relative lg:absolute lg:top-[192px] w-full h-[300px] md:h-[500px] lg:h-[760px] rounded-[8px] overflow-hidden bg-gray-100 mt-8 lg:mt-0">
+            <div className="w-full h-[350px] md:h-[550px] lg:h-[760px] rounded-[8px] overflow-hidden bg-gray-100 mt-12">
               <img src={project.sections[0].images[0]} className="w-full h-full object-cover" alt="Vision" />
             </div>
           </div>
 
           {/* Challenges Section */}
-          <div className="relative lg:absolute lg:top-[1092px] lg:left-0 lg:right-0 lg:h-[818px] flex flex-col">
+          <div className="flex flex-col">
             <ContentHeader category="CHALLENGES" title="Capturing Emotion & Atmosphere" text={project.sections[1].text} />
-            <div className="relative lg:absolute lg:top-[192px] w-full h-[300px] md:h-[500px] lg:h-[760px] rounded-[8px] overflow-hidden bg-gray-100 mt-8 lg:mt-0">
-              <img src={project.sections[1].images[0]} className="w-full h-full object-cover" alt="Detail 1" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mt-12">
+              {project.sections[1].images.map((img, i) => (
+                <div key={i} className="w-full h-[350px] md:h-[500px] lg:h-[620px] rounded-[8px] overflow-hidden bg-gray-100">
+                  <img src={img} className="w-full h-full object-cover" alt={`Detail ${i + 1}`} />
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Outcome Section */}
-          <div className="relative lg:absolute lg:top-[2150px] lg:left-0 lg:right-0 lg:h-[978px] flex flex-col">
+          <div className="flex flex-col">
             <ContentHeader category="OUTCOME" title="Bringing the Day to Life" text={project.sections[2].text} isSplit />
-            <div className="relative lg:absolute lg:top-[192px] w-full h-[300px] md:h-[500px] lg:h-[760px] rounded-[8px] overflow-hidden bg-gray-100 mt-8 lg:mt-0">
+            <div className="w-full h-[350px] md:h-[550px] lg:h-[760px] rounded-[8px] overflow-hidden bg-gray-100 mt-12">
               <img src={project.sections[2].images[0]} className="w-full h-full object-cover" alt="Outcome" />
             </div>
           </div>
@@ -181,18 +185,18 @@ function InfoItem({ label, value, labelSize, valueSize }: { label: string; value
 
 function ContentHeader({ category, title, text, isSplit = false }: { category: string; title: string; text: string; isSplit?: boolean }) {
   return (
-    <div className="relative w-full h-auto lg:h-[170px] flex flex-col lg:flex-row">
-      <div className="w-full lg:w-[510.72px] h-[26px] flex items-center mb-6 lg:mb-0 gap-3">
+    <div className="relative w-full h-auto xl:h-[170px] flex flex-col xl:flex-row">
+      <div className="w-full lg:w-[400px] xl:w-[510.72px] h-[26px] flex items-center mb-2 lg:mb-2 gap-3">
         <div className="w-[12px] h-[18px] flex items-center justify-center">
           <div className="w-[12px] h-[12px] bg-[#FF462E] transform rotate-45" />
         </div>
         <span className="text-[16.6px] font-normal uppercase leading-[26px]">{category}</span>
       </div>
-      <div className={`${isSplit ? 'lg:ml-auto lg:w-[804px]' : 'flex-1'} relative`}>
-        <h4 className="text-[24px] lg:text-[29.3px] font-medium leading-[40px] tracking-[-1px] text-[#05080C] lg:mt-[-4px]">
+      <div className={`${isSplit ? 'lg:ml-auto xl:w-[804px]' : 'flex-1'} relative`}>
+        <h4 className="text-[24px] lg:text-[29.3px] lg:mt-2 font-medium leading-[40px] tracking-[-1px] text-[#05080C] xl:mt-[-4px]">
           {title}
         </h4>
-        <p className="text-[16px] lg:text-[16.3px] leading-[26px] text-[#5B5B5B] mt-[28px]">
+        <p className="text-[16px] lg:text-[16.3px] leading-[26px] text-[#5B5B5B] mt-[20px]">
           {text}
         </p>
       </div>

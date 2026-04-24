@@ -75,7 +75,7 @@ export function NotFoundPage() {
         <div
           className="flex items-center justify-center mb-8 lg:mb-10"
         >
-          <div className="relative flex-shrink-0 w-[55vw] max-w-[200px] lg:w-auto lg:max-w-none"
+          <div className="relative shrink-0 w-[55vw] max-w-[200px] lg:w-auto lg:max-w-none"
             style={{
               // desktop gets the original pixel clamp; mobile overridden by Tailwind above
             }}

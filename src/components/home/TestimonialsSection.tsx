@@ -50,7 +50,7 @@ export function TestimonialsSection() {
       {/* Top Header */}
       <div className="flex flex-col items-center gap-4 text-center">
         <div className="flex items-center gap-2">
-          <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[8px] border-l-[#FF462E] border-b-[6px] border-b-transparent" />
+          <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-8 border-l-[#FF462E] border-b-[6px] border-b-transparent" />
           <span className="text-white text-[13px] xl:text-[14px]">Testimonials</span>
         </div>
         <h2 className="text-white text-[36px] sm:text-[48px] xl:text-[62.8px] font-medium tracking-tight xl:tracking-[-2.04px]">
@@ -71,7 +71,7 @@ export function TestimonialsSection() {
                   <Star key={i} size={16} fill="#05080c" stroke="none" />
                 ))}
               </div>
-              <h5 className="text-[#05080c] text-[18px] xl:text-[20px] font-medium leading-[1.5] xl:leading-[1.4]">
+              <h5 className="text-[#05080c] text-[18px] xl:text-[20px] font-medium leading-normal xl:leading-[1.4]">
                 "{mainTestimonial.content}"
               </h5>
             </div>
@@ -85,7 +85,7 @@ export function TestimonialsSection() {
           <div className="xl:col-span-3 h-[300px] sm:h-[400px] xl:h-[440px] rounded-sm overflow-hidden">
             <img 
               src={mainTestimonial.image} 
-              className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" 
+              className="w-full h-full object-cover grayscale-20 hover:grayscale-0 transition-all duration-700" 
               alt="Artistic Portrait" 
             />
           </div>

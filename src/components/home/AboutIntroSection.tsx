@@ -5,7 +5,15 @@ import { MagnetButton } from "../ui/MagnetButton";
 import { useCountUp } from "../../lib/use-reveal";
 import { useNavigate } from "@tanstack/react-router";
 
-const cards = [
+interface AboutCardData {
+  readonly src: string;
+  readonly value: number;
+  readonly suffix: string;
+  readonly label: string;
+  readonly isK?: boolean;
+}
+
+const cards: readonly AboutCardData[] = [
   {
     src: "/images/home/about-1.webp",
     value: 10,
@@ -26,7 +34,7 @@ const cards = [
     label: "Happy Clients Captured",
     isK: true
   },
-] as const;
+];
 
 export function AboutIntroSection() {
   const navigate = useNavigate();
@@ -74,7 +82,7 @@ export function AboutIntroSection() {
           <div className="relative xl:absolute xl:top-[396px] left-0 right-0 xl:h-[192px] flex flex-col xl:flex-row">
 
             {/* Left: Testimonial (approx 60% of content wrapper) */}
-            <div className="flex-[6] w-full xl:h-full flex flex-col xl:flex-row items-start xl:items-center gap-4 xl:gap-6 xl:pr-12 pt-8 pb-8 xl:py-0 border-t xl:border-y border-[#E2E2E3]">
+            <div className="flex-6 w-full xl:h-full flex flex-col xl:flex-row items-start xl:items-center gap-4 xl:gap-6 xl:pr-12 pt-8 pb-8 xl:py-0 border-t xl:border-y border-[#E2E2E3]">
               <div className="w-[52px] h-[52px] rounded-full bg-gray-200 overflow-hidden shrink-0">
                 <img src="/images/home/testimonial-hero.webp" alt="Avatar" className="w-full h-full object-cover" />
               </div>
@@ -95,7 +103,7 @@ export function AboutIntroSection() {
             </div>
 
             {/* Right: Philosophy (approx 40% of content wrapper) */}
-            <div className="flex-[4] w-full xl:h-full flex flex-col justify-center xl:pl-12 py-8 xl:py-0 border-y border-[#E2E2E3]">
+            <div className="flex-4 w-full xl:h-full flex flex-col justify-center xl:pl-12 py-8 xl:py-0 border-y border-[#E2E2E3]">
               <h3 className="text-[18px] xl:text-[22.1px] leading-[32px] font-medium tracking-[-1px] text-[#05080C] mb-2 xl:uppercase opacity-80 xl:text-xs xl:tracking-wider">
                 Capturing Genuine Emotions
               </h3>
@@ -118,7 +126,7 @@ export function AboutIntroSection() {
   );
 }
 
-function AboutCard({ card }: { card: typeof cards[0] }) {
+function AboutCard({ card }: { card: AboutCardData }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
   const { value } = useCountUp(card.value, 1600, isInView);
@@ -132,7 +140,7 @@ function AboutCard({ card }: { card: typeof cards[0] }) {
       <img
         src={card.src}
         alt={card.label}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms]"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-2000"
       />
       {/* Card Content Overlay */}
       <div className="absolute inset-x-0 bottom-0 h-[154px] bg-[#05080C]/48 backdrop-blur-md flex flex-col items-center justify-center text-center">

@@ -28,7 +28,7 @@ export function MyApproachSection() {
     <section className="relative w-full bg-[#05080C] py-16 md:py-24 xl:py-32 overflow-hidden px-4 md:px-6 xl:px-6">
 
       {/* Background Wireframe Artwork - Anchored Bottom Left */}
-      <div className="absolute bottom-[-5%] xl:bottom-[-10%] left-[-15%] xl:left-[-12%] w-[400px] md:w-[600px] xl:w-[800px] h-auto -rotate-[140deg] pointer-events-none opacity-100 z-0">
+      <div className="absolute bottom-[-5%] xl:bottom-[-10%] left-[-15%] xl:left-[-12%] w-[400px] md:w-[600px] xl:w-[800px] h-auto -rotate-140 pointer-events-none opacity-100 z-0">
         <img
           src="/images/about/my_approach.webp"
           alt="Camera Wireframe"
@@ -72,10 +72,10 @@ export function MyApproachSection() {
         >
           <div className="relative w-full max-w-[1000px]">
             {/* Viewfinder Corners - Hidden on very small mobile for cleaner look if needed, but keeping for now */}
-            <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-8 md:w-12 h-8 md:h-12 border-t-[2px] border-l-[2px] border-white/60 rounded-[4px]" />
-            <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-8 md:w-12 h-8 md:h-12 border-t-[2px] border-r-[2px] border-white/60 rounded-[4px]" />
-            <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 w-8 md:w-12 h-8 md:h-12 border-b-[2px] border-l-[2px] border-white/60 rounded-[4px]" />
-            <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 w-8 md:w-12 h-8 md:h-12 border-b-[2px] border-r-[2px] border-white/60 rounded-[4px]" />
+            <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-8 md:w-12 h-8 md:h-12 border-t-2 border-l-2 border-white/60 rounded-[4px]" />
+            <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-8 md:w-12 h-8 md:h-12 border-t-2 border-r-2 border-white/60 rounded-[4px]" />
+            <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 w-8 md:w-12 h-8 md:h-12 border-b-2 border-l-2 border-white/60 rounded-[4px]" />
+            <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 w-8 md:w-12 h-8 md:h-12 border-b-2 border-r-2 border-white/60 rounded-[4px]" />
 
             {/* White Grid Container */}
             <div className="bg-white rounded-sm overflow-hidden grid grid-cols-1 sm:grid-cols-2">

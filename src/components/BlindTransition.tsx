@@ -19,11 +19,11 @@ export function BlindTransition({ trigger }: { trigger: string }) {
   if (isDone) return null;
 
   return (
-    <div className="fixed inset-0 z-[1000] flex pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 z-1000 flex pointer-events-none overflow-hidden">
       {Array.from({ length: 8 }).map((_, i) => (
         <motion.div
           key={i}
-          className="h-full bg-[#000]"
+          className="h-full bg-black"
           style={{ width: "12.5%" }}
           initial={{ x: "0%" }}
           animate={{ x: "-100%" }}

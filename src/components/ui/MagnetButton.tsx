@@ -25,7 +25,7 @@ export function MagnetButton({
     stiffness: 400,
     damping: 30,
     mass: 1
-  };
+  } as const;
 
   const isLight = variant === "light";
   
@@ -90,7 +90,7 @@ export function MagnetButton({
         transition={transition}
         className="flex items-center justify-center px-5 border h-12 -ml-px z-0"
       >
-        <span className="text-[16.7px] leading-[26px] font-medium font-['Inter',_sans-serif] whitespace-nowrap">
+        <span className="text-[16.7px] leading-[26px] font-medium whitespace-nowrap">
           {text}
         </span>
       </motion.div>

@@ -151,7 +151,7 @@ export function ProcessSection() {
                 >
                    {/* Description */}
                    <p 
-                     className="relative xl:absolute text-[#E2E2E3] font-['Inter'] font-normal flex items-center text-[13.5px] sm:text-[15px] xl:text-[16.5px] leading-[1.5] xl:leading-[26px] mb-6 xl:mb-0 xl:left-[32px] xl:right-[53px] xl:top-[34px]" 
+                     className="relative xl:absolute text-[#E2E2E3] font-['Inter'] font-normal flex items-center text-[13.5px] sm:text-[15px] xl:text-[16.5px] leading-normal xl:leading-[26px] mb-6 xl:mb-0 xl:left-[32px] xl:right-[53px] xl:top-[34px]" 
                    >
                      {slide.desc}
                    </p>
@@ -159,12 +159,12 @@ export function ProcessSection() {
                    {/* Contact Button (Magnetic) */}
                    <MagnetWrapper to="/contact" className="relative xl:absolute z-50 cursor-pointer w-[185.42px] h-[48px] xl:left-[32px] xl:top-[108px]">
                       {/* Icon Container */}
-                      <div className="absolute left-0 w-[48px] h-[48px] bg-[#F5F5F5]/[0.08] border border-[#F5F5F5]/[0.08] rounded-[4px] flex items-center justify-center transition-all duration-300 ease-out group-hover:bg-white group-hover:rounded-r-none group-hover:border-white z-10 pointer-events-none">
+                      <div className="absolute left-0 w-[48px] h-[48px] bg-[#F5F5F5]/8 border border-[#F5F5F5]/8 rounded-[4px] flex items-center justify-center transition-all duration-300 ease-out group-hover:bg-white group-hover:rounded-r-none group-hover:border-white z-10 pointer-events-none">
                          <CornerDownRight className="text-white group-hover:text-[#05080C] transition-colors duration-300" size={20} />
                       </div>
                       
                       {/* Text Container */}
-                      <div className="absolute left-[52px] w-[133.42px] h-[48px] bg-[#F5F5F5]/[0.08] border border-[#F5F5F5]/[0.12] rounded-[4px] flex items-center px-5 transition-all duration-300 ease-out group-hover:px-[16px] group-hover:-translate-x-[4px] group-hover:bg-white group-hover:border-white group-hover:rounded-l-none group-hover:w-[137.42px] z-0 pointer-events-none">
+                      <div className="absolute left-[52px] w-[133.42px] h-[48px] bg-[#F5F5F5]/8 border border-[#F5F5F5]/12 rounded-[4px] flex items-center px-5 transition-all duration-300 ease-out group-hover:px-[16px] group-hover:-translate-x-[4px] group-hover:bg-white group-hover:border-white group-hover:rounded-l-none group-hover:w-[137.42px] z-0 pointer-events-none">
                          <span className="text-white group-hover:text-[#05080C] text-[16.7px] leading-[26px] font-medium font-['Inter'] transition-colors duration-300">
                            Contact Me
                          </span>

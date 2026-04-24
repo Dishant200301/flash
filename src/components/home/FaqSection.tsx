@@ -41,7 +41,7 @@ export function FaqSection() {
       <img 
         src="/images/home/faq_bg.webp" 
         alt="Camera sketch background" 
-        className="absolute top-[0px] left-[0px] md:-left-[5%] w-[450px] max-w-[50vw] opacity-100 pointer-events-none invert"
+        className="absolute top-0 left-0 md:-left-[5%] w-[450px] max-w-[50vw] opacity-100 pointer-events-none invert"
         style={{ zIndex: 0 }}
       />
 
@@ -142,7 +142,7 @@ function AccordionItem({ faq, isOpen, onClick }: { faq: FAQItem, isOpen: boolean
                 transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                 className="overflow-hidden"
               >
-                <p className="text-[14px] sm:text-[16px] leading-[1.5] xl:leading-[26px] text-[#7a7a7a] max-w-[600px] pt-1 pb-1">
+                <p className="text-[14px] sm:text-[16px] leading-normal xl:leading-[26px] text-[#7a7a7a] max-w-[600px] pt-1 pb-1">
                   {faq.a}
                 </p>
               </motion.div>
@@ -150,7 +150,7 @@ function AccordionItem({ faq, isOpen, onClick }: { faq: FAQItem, isOpen: boolean
           </AnimatePresence>
         </div>
 
-        <div className="flex-shrink-0 mt-1 flex items-center justify-center">
+        <div className="shrink-0 mt-1 flex items-center justify-center">
           {isOpen ? (
             <Minus className="w-5 h-5 text-[#05080C]" strokeWidth={1.5} />
           ) : (

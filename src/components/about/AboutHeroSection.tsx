@@ -11,9 +11,9 @@ export function AboutHeroSection() {
       scaleX: 0,
       transition: {
         duration: 1.1,
-        ease: [0.76, 0, 0.24, 1],
+        ease: [0.76, 0, 0.24, 1] as const,
         delay: 0.15 + i * 0.05,
-      } as any,
+      },
     }),
   };
 
@@ -25,8 +25,8 @@ export function AboutHeroSection() {
       y: 15,
       transition: {
         duration: 0.5,
-        ease: [0.76, 0, 0.24, 1],
-      } as any,
+        ease: [0.76, 0, 0.24, 1] as const,
+      },
     },
     visible: {
       opacity: 1,
@@ -34,14 +34,14 @@ export function AboutHeroSection() {
       y: 0,
       transition: {
         duration: 1.5,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
         delay: 0.8,
-      } as any,
+      },
     },
   };
 
   return (
-    <section className="relative w-full h-[100dvh] xl:h-[130dvh] overflow-hidden bg-black flex justify-center">
+    <section className="relative w-full h-dvh xl:h-[130dvh] overflow-hidden bg-black flex justify-center">
 
       {/* 1. Cinematic Background Image */}
       <motion.img
@@ -93,7 +93,7 @@ export function AboutHeroSection() {
             <h2 className="font-normal text-white text-[42px] sm:text-[64px] xl:text-[96px] leading-[1.1] xl:leading-[100px] tracking-tight">
               FLASH
             </h2>
-            <p className="font-normal text-white text-[14px] sm:text-[16px] xl:text-[18px] leading-[1.5] xl:leading-[26px] max-w-[95%] sm:max-w-[400px] xl:max-w-[540px]">
+            <p className="font-normal text-white text-[14px] sm:text-[16px] xl:text-[18px] leading-normal xl:leading-[26px] max-w-[95%] sm:max-w-[400px] xl:max-w-[540px]">
               Capturing timeless moments with artistry, precision, 
               <br className="hidden xl:block"/> and passion—your story framed beautifully through 
               <br className="hidden xl:block"/> professional photography.
@@ -104,7 +104,7 @@ export function AboutHeroSection() {
       </div>
 
       {/* 2. PRO VERTICAL BLIND LOADER (Reveal from Left to Right) */}
-      <div className="absolute inset-0 z-[200] flex pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 z-200 flex pointer-events-none overflow-hidden">
         {Array.from({ length: SLAT_COUNT }).map((_, i) => (
           <div key={i} className="h-full relative overflow-hidden flex-1">
             <motion.div

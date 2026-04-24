@@ -46,7 +46,7 @@ export function WhyChooseSection() {
               </h2>
 
               <div className="xl:pl-[248px] flex flex-col items-start">
-                <p className="text-[15px] sm:text-[16.5px] leading-[1.5] xl:leading-[26px] text-[#999999] max-w-[340px] mb-6 xl:mb-[27px]">
+                <p className="text-[15px] sm:text-[16.5px] leading-normal xl:leading-[26px] text-[#999999] max-w-[340px] mb-6 xl:mb-[27px]">
                   Through my lens, I capture raw emotions, authentic connections, and fleeting details that transform your moments into lasting, unforgettable stories.
                 </p>
                  <button className="w-10 h-10 sm:w-[48px] sm:h-[48px] bg-white rounded-full flex items-center justify-center transition-transform hover:scale-110 active:scale-95">
@@ -76,7 +76,7 @@ export function WhyChooseSection() {
 
                   <div className="flex -space-x-[16px]">
                     {[1, 2, 3, 4, 5].map((i) => (
-                      <div key={i} className="w-[60px] h-[60px] rounded-full border-[2px] border-white overflow-hidden shrink-0">
+                      <div key={i} className="w-[60px] h-[60px] rounded-full border-2 border-white overflow-hidden shrink-0">
                         <img src={`/images/home/portfolio/clients-${i}.webp`} alt="Client" className="w-full h-full object-cover" />
                       </div>
                     ))}
@@ -115,7 +115,7 @@ export function WhyChooseSection() {
               {/* Instagram Link Card (280x416) */}
               <div className="w-full sm:w-1/2 xl:w-[280px] h-[350px] sm:h-full xl:h-full relative rounded-sm overflow-hidden group border border-white/10 shrink-0">
                 <img src="/images/home/portfolio/instagram.webp" alt="Instagram" className="w-full h-full object-cover grayscale-[0.2] transition-transform duration-1000 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-transparent to-transparent" />
 
                 {/* Link Content matching Image 1 */}
                 <a

@@ -11,7 +11,7 @@ export function ContactHeroSection() {
       scaleX: 0,
       transition: {
         duration: 1.1,
-        ease: [0.76, 0, 0.24, 1],
+        ease: [0.76, 0, 0.24, 1] as const,
         delay: 0.15 + i * 0.05,
       },
     }),
@@ -26,14 +26,14 @@ export function ContactHeroSection() {
       y: 0,
       transition: {
         duration: 1.5,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
         delay: 0.8
       }
     }
   };
 
   return (
-    <section className="relative w-full h-[100dvh] overflow-hidden bg-black flex justify-center">
+    <section className="relative w-full h-dvh overflow-hidden bg-black flex justify-center">
 
       {/* 1. Cinematic Background Image */}
       <motion.img
@@ -62,14 +62,14 @@ export function ContactHeroSection() {
           
           {/* Top Right Info Block - Responsive adjustment */}
           <div className="absolute right-4 md:right-[5%] lg:right-[3%] top-[150px] md:top-[180px] lg:top-[32dvh] max-w-[90%] md:max-w-[540px] text-right px-0 md:px-0 z-20">
-             <p className="font-['Inter_Tight',_sans-serif] text-[15px] md:text-[16px] lg:text-[18px] leading-[1.5] md:leading-[24px] lg:leading-[26px] font-normal text-white mb-[16px] md:mb-[24px] lg:mb-[32px] max-w-[280px] sm:max-w-[320px] md:max-w-none ml-auto">
+             <p className="font-['Inter_Tight',sans-serif] text-[15px] md:text-[16px] lg:text-[18px] leading-normal md:leading-[24px] lg:leading-[26px] font-normal text-white mb-[16px] md:mb-[24px] lg:mb-[32px] max-w-[280px] sm:max-w-[320px] md:max-w-none ml-auto">
                Capturing professional with artistry, my photography embraces weddings,
                portraits, and lifestyle sessions—preserving your story with elegance and
                timeless beauty.
              </p>
              <a
                href="mailto:hello@flash.com"
-               className="font-['Inter_Tight',_sans-serif] text-[15px] md:text-[16px] lg:text-[18px] leading-[24px] md:leading-[26px] font-medium text-white hover:underline transition-opacity"
+               className="font-['Inter_Tight',sans-serif] text-[15px] md:text-[16px] lg:text-[18px] leading-[24px] md:leading-[26px] font-medium text-white hover:underline transition-opacity"
              >
                hello@flash.com
              </a>
@@ -99,7 +99,7 @@ export function ContactHeroSection() {
       </div>
 
       {/* 2. PRO VERTICAL BLIND LOADER (Reveal from Left to Right) */}
-      <div className="absolute inset-0 z-[200] flex pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 z-200 flex pointer-events-none overflow-hidden">
         {Array.from({ length: SLAT_COUNT }).map((_, i) => (
           <div key={i} className="h-full relative overflow-hidden flex-1">
             <motion.div

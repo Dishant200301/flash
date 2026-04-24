@@ -95,8 +95,8 @@
   --ring: oklch(0.7 0.04 260);
 
   /* Brand accents */
-  --brand-red: oklch(0.6 0.21 25);               /* Raku red dot accent */
-  --brand-blue: oklch(0.78 0.12 230);            /* cinematic blue */
+  --brand-red: oklch(0.6 0.21 25);              
+  --brand-blue: oklch(0.78 0.12 230);            
 
   --chart-1: oklch(0.78 0.12 230);
   --chart-2: oklch(0.6 0.21 25);

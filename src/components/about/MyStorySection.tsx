@@ -32,7 +32,7 @@ export function MyStorySection() {
               
               {/* Gallery Image 1 (Left) */}
               <div 
-                className="absolute w-[100px] sm:w-[120px] xl:w-[140px] h-[140px] sm:h-[160px] xl:h-[192px] left-[5%] sm:left-[15%] xl:left-[52.44px] top-[20px] xl:top-[22.91px] rounded-[7px] overflow-hidden border-[3px] border-[#E2E2E3] rotate-[15deg]"
+                className="absolute w-[100px] sm:w-[120px] xl:w-[140px] h-[140px] sm:h-[160px] xl:h-[192px] left-[5%] sm:left-[15%] xl:left-[52.44px] top-[20px] xl:top-[22.91px] rounded-[7px] overflow-hidden border-[3px] border-[#E2E2E3] rotate-15"
               >
                 <img
                   src="/images/about/story_card-1(1).webp"
@@ -43,7 +43,7 @@ export function MyStorySection() {
 
               {/* Gallery Image 2 (Right) */}
               <div 
-                className="absolute w-[100px] sm:w-[120px] xl:w-[140px] h-[140px] sm:h-[160px] xl:h-[192px] right-[5%] sm:right-[15%] xl:right-auto xl:left-[275px] top-[20px] xl:top-[22px] rounded-[7px] overflow-hidden border-[3px] border-[#E2E2E3] rotate-[15deg]"
+                className="absolute w-[100px] sm:w-[120px] xl:w-[140px] h-[140px] sm:h-[160px] xl:h-[192px] right-[5%] sm:right-[15%] xl:right-auto xl:left-[275px] top-[20px] xl:top-[22px] rounded-[7px] overflow-hidden border-[3px] border-[#E2E2E3] rotate-15"
               >
                 <img
                   src="/images/about/story_card-1(3).webp"
@@ -95,7 +95,7 @@ export function MyStorySection() {
               ].map((item, idx) => (
                 <div 
                   key={idx} 
-                  className="absolute w-[33%] sm:w-[90px] xl:w-[101px] aspect-square border-[2px] border-white rounded-full overflow-hidden bg-gray-800"
+                  className="absolute w-[33%] sm:w-[90px] xl:w-[101px] aspect-square border-2 border-white rounded-full overflow-hidden bg-gray-800"
                   style={{ left: item.left }}
                 >
                   <img
@@ -123,7 +123,7 @@ export function MyStorySection() {
 
             {/* Description Text - Positioned at bottom as per reference image */}
             <div className="max-w-[280px]">
-              <p className="font-medium text-[14px] xl:text-[16.3px] leading-[1.5] xl:leading-[26px] text-[#999999] text-center">
+              <p className="font-medium text-[14px] xl:text-[16.3px] leading-normal xl:leading-[26px] text-[#999999] text-center">
                 Over 4k+ Clients Served <br /> with satisfaction
               </p>
             </div>

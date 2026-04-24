@@ -16,7 +16,7 @@ export function Hero() {
       scaleX: 0,
       transition: {
         duration: 1.1,
-        ease: [0.76, 0, 0.24, 1],
+        ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
         delay: 0.15 + i * 0.05,
       },
     }),
@@ -31,14 +31,14 @@ export function Hero() {
       y: 0,
       transition: {
         duration: 1.5,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
         delay: 0.8
       }
     }
   };
 
   return (
-    <section className="relative w-full h-[100dvh] xl:h-[120dvh] overflow-hidden bg-black flex justify-center">
+    <section className="relative w-full h-dvh xl:h-[120dvh] overflow-hidden bg-black flex justify-center">
 
       {/* 1. Cinematic Background Image - Stylish Portrait */}
       <motion.img
@@ -87,11 +87,11 @@ export function Hero() {
             <div className="group relative w-full h-full rounded-[4px] overflow-hidden border border-white/5 bg-white/5 backdrop-blur-md shadow-2xl">
               <img
                 src="/images/home/recent_work.webp"
-                className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-[2000ms]"
+                className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-2000"
                 alt="Wedding"
               />
               <div className="relative h-full flex flex-col items-center justify-center text-center text-white">
-                <span className="text-[14px] sm:text-[18px] leading-[26px] font-normal tracking-[0.1em] sm:tracking-[0.2em] uppercase mb-1 opacity-70">RECENT WORK</span>
+                <span className="text-[14px] sm:text-[18px] leading-[26px] font-normal tracking-widest sm:tracking-[0.2em] uppercase mb-1 opacity-70">RECENT WORK</span>
                 <span className="text-[36px] sm:text-[48px] leading-[1.1] sm:leading-[52px] font-normal tracking-[-1.5px] sm:tracking-[-2px]">Wedding</span>
               </div>
             </div>
@@ -114,7 +114,7 @@ export function Hero() {
           {/* Hero Title Image (Giant Label) - Precisely anchored at the viewport bottom */}
           <div className="absolute bottom-[3%] sm:bottom-[2%] xl:bottom-[-2%] left-[4vw] right-[4vw] xl:left-[68px] xl:right-[68px] pointer-events-none flex justify-center">
             <h1
-              className="text-mega text-center leading-[0.85] xl:leading-[0.75] select-none text-[clamp(6rem,24vw,29rem)] xl:text-[clamp(10rem,22.5vw,29rem)] [WebkitTextStroke:1px_rgba(255,255,255,0.06)] bg-gradient-to-b from-white/[0.04] to-white/[0.12] bg-clip-text text-transparent"
+              className="text-mega text-center leading-[0.85] xl:leading-[0.75] select-none text-[clamp(6rem,24vw,29rem)] xl:text-[clamp(10rem,22.5vw,29rem)] [WebkitTextStroke:1px_rgba(255,255,255,0.06)] bg-linear-to-b from-white/4 to-white/12 bg-clip-text text-transparent"
             >
               FLASH
             </h1>
@@ -123,7 +123,7 @@ export function Hero() {
       </div>
 
       {/* 2. PRO VERTICAL BLIND LOADER (Reveal from Left to Right) */}
-      <div className="absolute inset-0 z-[200] flex pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 z-200 flex pointer-events-none overflow-hidden">
         {Array.from({ length: SLAT_COUNT }).map((_, i) => (
           <div key={i} className="h-full relative overflow-hidden flex-1">
             <motion.div

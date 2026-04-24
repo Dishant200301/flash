@@ -60,7 +60,7 @@ export function PortfolioPreviewSection() {
 
       {/* GLASS REFRACTION CURSOR - Hidden on smaller breakpoints to avoid touch screen sticky-cursor issues */}
       <motion.div
-        className="hidden xl:block fixed pointer-events-none z-[9999] rounded-full overflow-hidden"
+        className="hidden xl:block fixed pointer-events-none z-9999 rounded-full overflow-hidden"
         style={{
           left: cursorX,
           top: cursorY,
@@ -114,8 +114,8 @@ export function PortfolioPreviewSection() {
         )}
 
         {/* Layer 4: Top Specular Glints */}
-        <div className="absolute top-[4%] left-[10%] w-[50%] h-[15%] rounded-[100%] bg-gradient-to-b from-white/90 to-transparent blur-[2px] rotate-[-15deg] pointer-events-none" />
-        <div className="absolute top-[8%] right-[15%] w-[30%] h-[10%] rounded-[100%] bg-gradient-to-b from-white/60 to-transparent blur-[1px] rotate-[20deg] pointer-events-none" />
+        <div className="absolute top-[4%] left-[10%] w-[50%] h-[15%] rounded-[100%] bg-linear-to-b from-white/90 to-transparent blur-[2px] rotate-[-15deg] pointer-events-none" />
+        <div className="absolute top-[8%] right-[15%] w-[30%] h-[10%] rounded-[100%] bg-linear-to-b from-white/60 to-transparent blur-[1px] rotate-20 pointer-events-none" />
         
         {/* Layer 5: Base Shadowing & Ambient Occlusion */}
         <div className="absolute inset-0 rounded-full shadow-[inset_0_-10px_20px_rgba(0,0,0,0.1)] pointer-events-none mix-blend-multiply" />
@@ -126,7 +126,7 @@ export function PortfolioPreviewSection() {
         <h2 className=" font-medium text-[36px] sm:text-[48px] xl:text-[62.8px] leading-[1.1] xl:leading-[76px] tracking-tight xl:tracking-[-2.04px] text-[#05080C]">
           Capture the moments
         </h2>
-        <div className="mt-4 xl:mt-6 max-w-[90%] sm:max-w-[80%] md:max-w-[678px] text-[#5B5B5B] text-[14px] sm:text-[15px] xl:text-[16.3px] leading-[1.5] xl:leading-[26px]">
+        <div className="mt-4 xl:mt-6 max-w-[90%] sm:max-w-[80%] md:max-w-[678px] text-[#5B5B5B] text-[14px] sm:text-[15px] xl:text-[16.3px] leading-normal xl:leading-[26px]">
           <p className="inline sm:block">Discover a carefully curated collection of weddings, portraits, and lifestyle sessions that </p>
           <p className="inline sm:block">capture authentic emotions & timeless memories beautifully.</p>
         </div>
@@ -144,7 +144,7 @@ export function PortfolioPreviewSection() {
             className="flex flex-col group cursor-pointer xl:cursor-none" // custom cursor on desktop only
           >
             {/* Image Wrap */}
-            <div className="relative aspect-[2304/1904] overflow-hidden rounded-lg">
+            <div className="relative aspect-2304/1904 overflow-hidden rounded-lg">
               <motion.img
                 src={item.cover}
                 alt={item.title}

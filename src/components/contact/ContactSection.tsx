@@ -22,7 +22,7 @@ export function ContactSection() {
           <img
             src="/images/contact/bg_contact.webp"
             alt="Contact Background"
-            className="w-full h-full object-cover blur-[40px] opacity-70 scale-125"
+            className="w-full h-full object-cover blur-2xl opacity-70 scale-125"
           />
           <div className="absolute inset-0 bg-black/20" />
         </div>
@@ -122,13 +122,13 @@ export function ContactSection() {
             </form>
 
             {/* Photo Card (Mobile/Tablet: Order second as per ref) */}
-            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-[12px] overflow-hidden group order-2 lg:order-1">
+            <div className="relative w-full aspect-4/5 lg:aspect-auto lg:h-[600px] rounded-[12px] overflow-hidden group order-2 lg:order-1">
               <img 
                 src="/images/contact/contact.webp" 
                 alt="Portrait"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
               
               <div className="absolute bottom-[32px] md:bottom-[40px] left-[32px] md:left-[40px] z-10 flex flex-col">
                 <p className="text-white mb-1.5 text-[14px] md:text-[16.5px] font-normal">E-mail me at</p>

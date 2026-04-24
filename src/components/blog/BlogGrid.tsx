@@ -60,6 +60,10 @@ function BlogCard({ post, aspect = "aspect-square" }: { post: BlogPost; aspect?:
           <span>{post.category},</span>
           <span className="text-[#05080c]">{post.date}</span>
         </div>
+        {/* Excerpt Addition */}
+        <p className="mt-3 text-[14px] lg:text-[15px] leading-relaxed text-[#5b5b5b] line-clamp-2" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
+          {post.excerpt}
+        </p>
       </div>
     </Link>
   );
